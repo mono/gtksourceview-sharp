@@ -125,4 +125,5 @@ gtksourceview/gtksourceview-sharp.dll.config
 gtksourceview/Makefile
 gtksourceview-sharp.pc
 doc/Makefile
+sample/Makefile
 ])
