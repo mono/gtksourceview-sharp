@@ -1,5 +1,9 @@
 2004-11-12  Todd Berman  <tberman@off.net>
 
+	* gtksourceview-sharp.pc.in: set the Requires: to -2.0 properly
+
+2004-11-12  Todd Berman  <tberman@off.net>
+
 	* configure.in: Bump version to 0.6.99 (i know, 0.6 didnt exist) and
 	check for and use gtk-sharp-2.0
 	* gtksourceview/Makefile.am: push .xml to gapi-2.0
