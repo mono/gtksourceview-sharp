@@ -18,7 +18,7 @@ if test "x$PKG_CONFIG" = "xno"; then
 fi
 AC_SUBST(MONO)
 
-PKG_CHECK_MODULES(MONO, mono >= 0.90)
+PKG_CHECK_MODULES(MONO, mono >= 0.95)
 AC_SUBST(MONO_CFLAGS)
 AC_SUBST(MONO_LIBS)
 
@@ -63,7 +63,7 @@ AC_SUBST(GACUTIL)
 AC_SUBST(LIB_PREFIX)
 AC_SUBST(LIB_SUFFIX)
 
-PKG_CHECK_MODULES(GTK_SHARP, gtk-sharp >= 0.91)
+PKG_CHECK_MODULES(GTK_SHARP, gtk-sharp >= 0.93)
 gtksharp_prefix=`pkg-config --variable=prefix gtk-sharp`
 AC_SUBST(GTK_SHARP_CFLAGS)
 AC_SUBST(GTK_SHARP_LIBS)
@@ -99,7 +99,7 @@ if test "x$GAPI_CODEGEN" = "xno"; then
 fi
 AC_SUBST(GAPI_CODEGEN)
 
-MONODOC_REQUIRED_VERSION=0.12
+MONODOC_REQUIRED_VERSION=0.16
 PKG_CHECK_MODULES(MONODOC_DEPENDENCY, monodoc >= $MONODOC_REQUIRED_VERSION, enable_monodoc=yes, enable_monodoc=no)
                                                                                 
 if test "x$enable_monodoc" = "xyes"; then 
