@@ -2,3 +2,4 @@ makefile.in
 makefile
 *.dll
 generated
+generated-stamp

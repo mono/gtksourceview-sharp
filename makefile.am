@@ -1,5 +1,4 @@
-EXTRA_DIST=	csharp.lang
-SUBDIRS=	gtksourceview
-
-install:
-	$(INSTALL) -m 644 csharp.lang @prefix@/share/gtksourceview-1.0/language-specs
+SUBDIRS=		gtksourceview
+EXTRA_DIST=		csharp.lang
+csharp_langdir= 	@prefix@$/share/gtksourceview-1.0/language-specs
+csharp_lang_DATA=	csharp.lang
