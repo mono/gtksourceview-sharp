@@ -945,7 +945,7 @@
       <method name="IterFindMatchingBracket" cname="gtk_source_iter_find_matching_bracket" shared="true">
         <return-type type="gboolean" />
         <parameters>
-          <parameter type="GtkTextIter*" name="iter" />
+          <parameter type="GtkTextIter*" name="iter" pass_as="ref" />
         </parameters>
       </method>
       <method name="IterForwardSearch" cname="gtk_source_iter_forward_search" shared="true">
