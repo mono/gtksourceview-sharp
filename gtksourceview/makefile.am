@@ -1,4 +1,5 @@
-LIBRARY=	gtksourceview-sharp.dll
+LIBRARY_NAME=	gtksourceview-sharp
+LIBRARY=	$(LIBRARY_NAME).dll
 APIS=		gtksourceview-api.xml
 
 INCLUDE_APIS=	@gtksharp_prefix@/share/gapi/atk-api.xml		\
@@ -16,10 +17,11 @@ ASSEMBLIES=	-r atk-sharp.dll	\
 		-r gnome-sharp.dll	\
 		-r pango-sharp.dll
 
-EXTRA_DIST = $(sources) $(customs) Gtk.metadata gtksourceview-api.raw
+EXTRA_DIST = $(sources) $(customs) Gtk.metadata gtksourceview-api.raw AssemblyInfo.cs.in
 
-gtksourceviewsharpdir = $(libdir)
-gtksourceviewsharp_DATA = gtksourceview-sharp.dll
+DISTCLEANFILES = AssemblyInfo.cs
+
+noinst_DATA = gtksourceview-sharp.dll
 
 apidir = @gtksharp_prefix@/share/gapi
 api_DATA = gtksourceview-api.xml
@@ -35,18 +37,28 @@ generated-stamp: $(APIS) $(customs) $(sources) Gtk.metadata
 	$(GAPI_CODEGEN) --include $(INCLUDE_APIS) --generate $(APIS) \
 	--outdir=generated --customdir=. --assembly-name=gtksourceview-sharp && touch generated-stamp
 
-sources = GtkSourceView.cs
+sources = GtkSourceView.cs AssemblyInfo.cs
 build_sources = $(addprefix $(srcdir)/, $(sources))
 
 customs = SourceBuffer.custom
 build_customs = $(addprefix $(srcdir)/, $(customs))
 
-$(LIBRARY): generated-stamp $(build_sources)
+gtk-sharp.pub: $(top_srcdir)/gtk-sharp.pub
+	cp $(top_srcdir)/gtk-sharp.pub .
+
+$(LIBRARY): generated-stamp $(build_sources) gtk-sharp.pub
 	$(CSC) --unsafe --target library $(ASSEMBLIES) \
 	generated/*.cs $(build_sources) -o $(LIBRARY)
 
-CLEANFILES = $(LIBRARY) generated/*.cs generated-stamp gtksourceview-api.xml
+CLEANFILES = $(LIBRARY) generated/*.cs generated-stamp gtksourceview-api.xml gtksourceview-sharp.pub
 
 distclean-local:
 	rm -f makefile
 
+install-data-local:
+	echo "$(GACUTIL) /i $(LIBRARY) /f /root $(DESTDIR)$(libdir)";  \
+	$(GACUTIL) /i $(LIBRARY) /f /root $(DESTDIR)$(libdir) || exit 1;
+
+uninstall-local:
+	echo "$(GACUTIL) /u $(LIBRARY_NAME) /root $(DESTDIR)$(libdir)"; \
+	$(GACUTIL) /u $(LIBRARY_NAME) /root $(DESTDIR)$(libdir) || exit 1;
