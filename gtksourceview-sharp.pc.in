@@ -6,4 +6,4 @@ libdir=${exec_prefix}/lib
 Name: GtkSourceView#
 Description: GtkSourceView# - gtksourceview .NET Binding
 Version: @VERSION@
-Libs: -lib:${exec_prefix}/lib/gtk-sharp -r:gtksourceview-sharp
+Libs: -lib:${libdir}/mono/gtk-sharp -r:gtksourceview-sharp.dll
