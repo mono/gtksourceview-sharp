@@ -7,6 +7,9 @@
 	* gtksourceview/SourceLanguage.custom:
 	* gtksourceview/SourceLanguagesManager.custom: replace GLib.SList
 	returns with arrays of the appropriate types
+	* configure.in: update mono, monodoc, gtk# deps to 1.0
+	increment api version to 1.0.0.2
+	bump version to 0.5.99
 
 2004-07-02  John Luke  <jluke@cfl.rr.com>
 
