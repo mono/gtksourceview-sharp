@@ -23,7 +23,7 @@ DISTCLEANFILES = AssemblyInfo.cs
 
 noinst_DATA = gtksourceview-sharp.dll
 
-apidir = @gtksharp_prefix@/share/gapi
+apidir = $(DESTDIR)@gtksharp_prefix@/share/gapi
 api_DATA = gtksourceview-api.xml
 
 all: $(LIBRARY)
