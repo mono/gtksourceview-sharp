@@ -1,0 +1,9 @@
+prefix=@prefix@
+exec_prefix=${prefix}
+libdir=${exec_prefix}/lib
+
+
+Name: Gtk#
+Description: Gtk# - GNOME .NET Binding
+Version: @VERSION@
+Libs: -L ${exec_prefix}/lib -r:gtksourview-sharp
