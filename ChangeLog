@@ -1,3 +1,7 @@
+2004-06-06  John Luke  <jluke@cfl.rr.com>
+
+	* doc/Makefile.am: install docs conditionally on monodoc
+
 2004-06-01  Todd Berman  <tberman@sevenl.net>
 
 	* configure.in: require 0.8 of gtksourceview.

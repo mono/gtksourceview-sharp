@@ -1,12 +1,13 @@
 if ENABLE_MONODOC
 TARGETS = gtksourceview-sharp-docs.zip gtksourceview-sharp-docs.tree gtksourceview-sharp-docs.source
-DOCDIR = `$(MONODOC) --get-sourcesdir`
+docsdir = `$(MONODOC) --get-sourcesdir`
+docs_DATA = $(TARGETS)
 else
 TARGETS = 
-DOCDIR = $(datadir)
+docsdir = $(datadir)
+docs_DATA =
 endif
 
-noinst_DATA = $(TARGETS)
 
 ASSEMBLER = $(MONODOC) --assemble
 UPDATER = $(MONODOC) --update
