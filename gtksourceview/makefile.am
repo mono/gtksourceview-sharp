@@ -16,7 +16,7 @@ ASSEMBLIES=	-r atk-sharp.dll	\
 		-r gnome-sharp.dll	\
 		-r pango-sharp.dll
 
-EXTRA_DIST = 	*.custom *.metadata *.xml
+EXTRA_DIST = GtkSourceView.cs *.custom *.metadata *.xml
 
 gtksourceviewsharpdir = $(libdir)
 gtksourceviewsharp_DATA = gtksourceview-sharp.dll
@@ -33,10 +33,12 @@ $(LIBRARY): generated-stamp
 	$(MCS) --unsafe --target library $(ASSEMBLIES) --recurse '*.cs' -o $(LIBRARY)
 
 install:
+	mkdir -p $(DESTDIR)@prefix@/share/gapi
+	mkdir -p $(DESTDIR)$(libdir)
 	for i in $(APIS); do						\
-		$(INSTALL) -m 644 $$i @prefix@/share/gapi || true;	\
+		$(INSTALL) -m 644 $$i $(DESTDIR)@prefix@/share/gapi || true;	\
 	done &&								\
-	$(INSTALL) -m 644 $(LIBRARY) $(libdir)
+	$(INSTALL) -m 644 $(LIBRARY) $(DESTDIR)$(libdir)
 
 clean:
 	rm -rf $(LIBRARY) generated generated-stamp
