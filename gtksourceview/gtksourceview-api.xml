@@ -358,7 +358,7 @@
       <method name="GetLangFilesDirs" cname="gtk_source_languages_manager_get_lang_files_dirs">
         <return-type type="const-GSList*" />
       </method>
-      <method name="GetLanguageFromMimeType" cname="gtk_source_languages_manager_get_language_from_mime_type" hidden="1">
+      <method name="GetLanguageFromMimeType" cname="gtk_source_languages_manager_get_language_from_mime_type">
         <return-type type="GtkSourceLanguage*" />
         <parameters>
           <parameter type="const-gchar*" name="mime_type" />
