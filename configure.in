@@ -56,10 +56,13 @@ AC_PATH_PROG(GACUTIL, gacutil, no)
 if test "x$GACUTIL" = "xno" ; then
 	AC_MSG_ERROR([No gacutil tool found])
 fi
-                                                            
+
+GACUTIL_FLAGS='/package gtk-sharp /gacdir $(libdir)'
+                                     
 AC_SUBST(RUNTIME)
 AC_SUBST(CSC)
 AC_SUBST(GACUTIL)
+AC_SUBST(GACUTIL_FLAGS)
 AC_SUBST(LIB_PREFIX)
 AC_SUBST(LIB_SUFFIX)
 

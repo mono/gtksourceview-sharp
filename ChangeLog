@@ -1,3 +1,13 @@
+2004-06-26  Todd Berman  <tberman@off.net>
+
+	* configure.in: Add GACUTIL_FLAGS
+	* gtk-sharp.pub: remove.
+	* gtk-sharp.snk: add full keyfile.
+	* makefile.am: dist gtk-sharp.snk.
+	* sources/.cvsignore: ignore 1.0.0 dir.
+	* gtksourceview/makefile.am: modifications to use .snk and sign
+	the assembly properly.
+
 2004-06-06  John Luke  <jluke@cfl.rr.com>
 
 	* doc/Makefile.am: install docs conditionally on monodoc

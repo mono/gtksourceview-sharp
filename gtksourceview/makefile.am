@@ -39,22 +39,22 @@ build_sources = $(addprefix $(srcdir)/, $(sources))
 customs = SourceBuffer.custom
 build_customs = $(addprefix $(srcdir)/, $(customs))
 
-gtk-sharp.pub: $(top_srcdir)/gtk-sharp.pub
-	cp $(top_srcdir)/gtk-sharp.pub .
+gtk-sharp.snk: $(top_srcdir)/gtk-sharp.snk
+	cp $(top_srcdir)/gtk-sharp.snk .
 
-$(LIBRARY): generated-stamp $(build_sources) gtk-sharp.pub
+$(LIBRARY): generated-stamp $(build_sources) gtk-sharp.snk
 	$(CSC) --unsafe --target library $(ASSEMBLIES) \
 	generated/*.cs $(build_sources) -o $(LIBRARY)
 
-CLEANFILES = $(LIBRARY) generated/*.cs generated-stamp gtksourceview-api.xml gtk-sharp.pub
+CLEANFILES = $(LIBRARY) generated/*.cs generated-stamp gtksourceview-api.xml gtk-sharp.snk
 
 distclean-local:
 	rm -f makefile
 
 install-data-local:
-	echo "$(GACUTIL) /i $(LIBRARY) /f /package gtk-sharp /root $(DESTDIR)$(libdir)";  \
-	$(GACUTIL) /i $(LIBRARY) /f /package gtk-sharp /root $(DESTDIR)$(libdir) || exit 1;
+	echo "$(GACUTIL) /i $(LIBRARY) /f $(GACUTIL_FLAGS)";  \
+	$(GACUTIL) /i $(LIBRARY) /f $(GACUTIL_FLAGS) || exit 1;
 
 uninstall-local:
-	echo "$(GACUTIL) /u $(LIBRARY_NAME) /package gtk-sharp /root $(DESTDIR)$(libdir)"; \
-	$(GACUTIL) /u $(LIBRARY_NAME) /package gtk-sharp /root $(DESTDIR)$(libdir) || exit 1;
+	echo "$(GACUTIL) /u $(LIBRARY_NAME) $(GACUTIL_FLAGS)"; \
+	$(GACUTIL) /u $(LIBRARY_NAME) $(GACUTIL_FLAGS) || exit 1;
