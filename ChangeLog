@@ -1,3 +1,7 @@
+2004-06-29  Todd Berman  <tberman@off.net>
+
+	* gtksourceview/AssemblyInfo.cs.in: fix
+
 2004-06-26  Todd Berman  <tberman@off.net>
 
 	* configure.in: Add GACUTIL_FLAGS
