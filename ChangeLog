@@ -1,3 +1,10 @@
+2004-02-08  Martin Willemoes Hansen  <mwh@sysrq.dk>
+
+	* autogen.sh: Executes aclocal first, this fixes a lot of warnings
+	* gtksourceview: Added GtkSourceView.cs, this is the module class for
+	gtksourceview-sharp, it has a GtkSourceView.Init method which initializes
+	the module.
+
 2004-02-05  Martin Willemoes Hansen  <mwh@sysrq.dk>
 
 	* gtksourceview/makefile.am: Removed -nowarn:0660,0661, these warnings
