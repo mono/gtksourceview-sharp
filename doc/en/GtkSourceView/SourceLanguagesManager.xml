@@ -48,10 +48,10 @@
         <Parameter Name="mime_type" Type="System.String" />
       </Parameters>
       <Docs>
-        <summary>To be added</summary>
-        <param name="mime_type">a <see cref="T:System.String" /></param>
-        <returns>a <see cref="T:GtkSourceView.SourceLanguage" /></returns>
-        <remarks>To be added</remarks>
+        <summary>Returns <see cref="T:GtkSourceView.SourceLanguage" /> for a given mime type.</summary>
+        <param name="mime_type">The language's mime-type. For example, "text/xml" for XML.</param>
+        <returns>A <see cref="T:GtkSourceView.SourceLanguage" /> containing all the formatting specs for the given language.</returns>
+        <remarks>None</remarks>
       </Docs>
     </Member>
     <Member MemberName=".ctor">

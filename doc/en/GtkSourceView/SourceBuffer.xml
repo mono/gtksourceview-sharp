@@ -10,8 +10,10 @@
   </AssemblyInfo>
   <ThreadSafetyStatement>Gtk# is thread aware, but not thread safe; See the <link location="node:gtk-sharp/programming/threads">Gtk# Thread Programming</link> for details.</ThreadSafetyStatement>
   <Docs>
-    <summary>To be added</summary>
-    <remarks>To be added</remarks>
+    <summary>Text buffer for <see cref="T:GtkSourceView.SourceView" />.</summary>
+    <remarks>The SourceBuffer class is the model for <see cref="T:GtkSourceView.SourceView" /> widgets. It extends the <see cref="T:Gtk.TextBuffer" /> class by adding features necessary to display and edit source code: syntax highlighting, bracket matching and markers. It also implements support for undo/redo operations.
+
+By default highlighting is enabled, but you can disable it with <see cref="P:GtkSourceView.SourceBuffer.Highlight" />. This can be useful if you're not using <see cref="T:GtkSourceView.SourceLanguage" /> classes to set the highlighting patterns, and instead you're manually adding <see cref="T:GtkSourceView.SourceTag" /> classes  to the buffer's tag table. </remarks>
   </Docs>
   <Base>
     <BaseTypeName>Gtk.TextBuffer</BaseTypeName>
@@ -511,9 +513,9 @@
       </ReturnValue>
       <Parameters />
       <Docs>
-        <summary>To be added</summary>
-        <returns>a <see cref="T:System.Boolean" /></returns>
-        <remarks>To be added</remarks>
+        <summary>Controls the bracket match highlighting function in the buffer.If true, when you position your cursor over a bracket character (a parenthesis, a square bracket, etc.) the matching opening or closing bracket character will be highlighted. You can specify the style with <see cref="P:GtkSourceView.SourceBuffer.BracketMatchStyle" />.</summary>
+        <returns>True if the bracket matching is enabled, false is disabled.</returns>
+        <remarks>None</remarks>
       </Docs>
     </Member>
     <Member MemberName="Highlight">
