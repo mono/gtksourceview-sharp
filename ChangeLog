@@ -1,3 +1,12 @@
+2004-04-30  John Luke  <jluke@cfl.rr.com>
+
+	* configure.in: update to be like Gtk# cvs
+	output AssemblyInfo.cs and the config file
+	dep on Gtk# 0.18.99
+	* gtksourceview/makefile.am: use $CSC instead of $MCS
+	* gtksourceview/.cvsignore: ignore AssemblyInfo.cs and
+	gtksourceview-sharp.dll.config
+	
 2004-04-27  Todd Berman  <tberman@sevenl.net>
 
 	* gtksourceview/Gtk.metadata: change namespace to GtkSourceView.

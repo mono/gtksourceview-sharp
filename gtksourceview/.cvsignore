@@ -4,3 +4,5 @@ makefile
 generated
 generated-stamp
 gtksourceview-api.xml
+AssemblyInfo.cs
+gtksourceview-sharp.dll.config

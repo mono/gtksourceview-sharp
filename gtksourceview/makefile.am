@@ -42,7 +42,7 @@ customs = SourceBuffer.custom
 build_customs = $(addprefix $(srcdir)/, $(customs))
 
 $(LIBRARY): generated-stamp $(build_sources)
-	$(MCS) --unsafe --target library $(ASSEMBLIES) \
+	$(CSC) --unsafe --target library $(ASSEMBLIES) \
 	generated/*.cs $(build_sources) -o $(LIBRARY)
 
 CLEANFILES = $(LIBRARY) generated/*.cs generated-stamp gtksourceview-api.xml
