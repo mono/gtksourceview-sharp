@@ -18,7 +18,7 @@ if test "x$PKG_CONFIG" = "xno"; then
 fi
 AC_SUBST(MONO)
 
-PKG_CHECK_MODULES(MONO, mono >= 0.30)
+PKG_CHECK_MODULES(MONO, mono >= 0.31)
 AC_SUBST(MONO_CFLAGS)
 AC_SUBST(MONO_LIBS)
 
@@ -63,7 +63,7 @@ AC_SUBST(GACUTIL)
 AC_SUBST(LIB_PREFIX)
 AC_SUBST(LIB_SUFFIX)
 
-PKG_CHECK_MODULES(GTK_SHARP, gtk-sharp >= 0.18.99)
+PKG_CHECK_MODULES(GTK_SHARP, gtk-sharp >= 0.91)
 gtksharp_prefix=`pkg-config --variable=prefix gtk-sharp`
 AC_SUBST(GTK_SHARP_CFLAGS)
 AC_SUBST(GTK_SHARP_LIBS)
