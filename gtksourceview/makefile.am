@@ -1,0 +1,42 @@
+LIBRARY=	gtksourceview-sharp.dll
+APIS=		gtksourceview-api.xml
+
+INCLUDE_APIS=	@prefix@/share/gapi/atk-api.xml		\
+		@prefix@/share/gapi/gdk-api.xml		\
+		@prefix@/share/gapi/gdk-symbols.xml	\
+		@prefix@/share/gapi/gnome-api.xml	\
+		@prefix@/share/gapi/gtk-api.xml		\
+		@prefix@/share/gapi/gtk-symbols.xml	\
+		@prefix@/share/gapi/pango-api.xml
+
+ASSEMBLIES=	-r atk-sharp.dll	\
+		-r gdk-sharp.dll	\
+		-r glib-sharp.dll	\
+		-r gtk-sharp.dll	\
+		-r gnome-sharp.dll	\
+		-r pango-sharp.dll
+
+EXTRA_DIST = 	*.custom *.metadata *.xml
+
+gtksourceviewsharpdir = $(libdir)
+gtksourceviewsharp_DATA = gtksourceview-sharp.dll
+
+
+all: $(LIBRARY)
+
+generated-stamp: $(APIS) *.custom *.metadata
+	$(GAPI_FIXUP) --api=gtksourceview-api.xml --metadata=Gtk.metadata && \
+	$(GAPI_CODEGEN) --include $(INCLUDE_APIS) --generate $(APIS) \
+	--outdir=generated --customdir=. --assembly-name=gtksourceview-sharp && touch generated-stamp
+
+$(LIBRARY): generated-stamp
+	$(MCS) --unsafe -nowarn:0660,0661 --target library $(ASSEMBLIES) --recurse '*.cs' -o $(LIBRARY)
+
+install:
+	for i in $(APIS); do						\
+		$(INSTALL) -m 644 $$i @prefix@/share/gapi || true;	\
+	done &&								\
+	$(INSTALL) -m 644 $(LIBRARY) $(libdir)
+
+clean:
+	rm -rf $(LIBRARY) generated generated-stamp
