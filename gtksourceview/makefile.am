@@ -21,6 +21,8 @@ EXTRA_DIST = GtkSourceView.cs *.custom *.metadata *.xml
 gtksourceviewsharpdir = $(libdir)
 gtksourceviewsharp_DATA = gtksourceview-sharp.dll
 
+apidir = @gtksharp_prefix@/share/gapi
+api_DATA = gtksourceview-api.xml
 
 all: $(LIBRARY)
 
@@ -31,14 +33,6 @@ generated-stamp: $(APIS) *.custom *.metadata
 
 $(LIBRARY): generated-stamp
 	$(MCS) --unsafe --target library $(ASSEMBLIES) --recurse '*.cs' -o $(LIBRARY)
-
-install:
-	mkdir -p $(DESTDIR)@prefix@/share/gapi
-	mkdir -p $(DESTDIR)$(libdir)
-	for i in $(APIS); do						\
-		$(INSTALL) -m 644 $$i $(DESTDIR)@prefix@/share/gapi || true;	\
-	done &&								\
-	$(INSTALL) -m 644 $(LIBRARY) $(DESTDIR)$(libdir)
 
 clean:
 	rm -rf $(LIBRARY) generated generated-stamp
