@@ -1,5 +1,10 @@
 2005-02-02  Jeroen Zwartepoorte  <jeroen@xs4all.nl>
 
+	* configure.in: Declare & substitute the gtksharp_prefix variable.
+	* gtksourceview/Makefile.am: Revert last commit.
+
+2005-02-02  Jeroen Zwartepoorte  <jeroen@xs4all.nl>
+
 	* gtksourceview/Makefile.am: s/gtksharp_prefix/gtksourceview_prefix/.
 
 2005-01-23  John Luke  <john.luke@gmail.com>
