@@ -22,9 +22,9 @@ CLEANFILES = gtksourceview-sharp-docs.zip gtksourceview-sharp-docs.tree
 EXTRA_DIST = $(TARGETS)
 
 install-data-local:
-	install -m 644 $(srcdir)/gtksourceview-sharp-docs.source `monodoc --get-sourcesdir`
-	install -m 644 $(srcdir)/gtksourceview-sharp-docs.tree `monodoc --get-sourcesdir`
-	install -m 644 $(srcdir)/gtksourceview-sharp-docs.zip `monodoc --get-sourcesdir`
+	install -m 644 $(srcdir)/gtksourceview-sharp-docs.source $(DESTDIR)`monodoc --get-sourcesdir`
+	install -m 644 $(srcdir)/gtksourceview-sharp-docs.tree $(DESTDIR)`monodoc --get-sourcesdir`
+	install -m 644 $(srcdir)/gtksourceview-sharp-docs.zip $(DESTDIR)`monodoc --get-sourcesdir`
 
 dist-hook:
 	mkdir -p $(distdir)/en
