@@ -1,28 +1,28 @@
 2004-02-08  Martin Willemoes Hansen  <mwh@sysrq.dk>
 
 	* autogen.sh: Executes aclocal first, this fixes a lot of warnings
-	* gtksourceview: Added GtkSourceView.cs, this is the module class for
-	gtksourceview-sharp, it has a GtkSourceView.Init method which initializes
-	the module.
+	* gtksourceview/GtkSourceView.cs: Added, this is the module class for
+	  gtksourceview-sharp, it has a GtkSourceView.Init method which initializes
+	  the module.
 
 2004-02-05  Martin Willemoes Hansen  <mwh@sysrq.dk>
 
 	* gtksourceview/makefile.am: Removed -nowarn:0660,0661, these warnings
-	are not generated anymore.
+	  are not generated anymore.
 
 2004-01-30  Martin Willemoes Hansen  <mwh@sysrq.dk>
 
 	* gtksourceview/SourceLanguagesManager.custom: Removed, this was a bad
-	fix which could lead to nasty null pointer exceptions.
+	  fix which could lead to nasty null pointer exceptions.
 	* gtksourceview/Gtk.metadata: Unhide method GetLanguageFromMimeType
 	* gtksourceview/gtksourceview-api.xml: Regenerated
 
 2003-12-10  John Luke  <jluke@cfl.rr.com>
 
 	* csharp.lang: rearrange keywords into one group and
-	alphabetize somewhat, add missing keywords from
-	mcs/mcs/cs-parser.jay, remove attribute regex because
-	it fails to compile or work frequently
+	  alphabetize somewhat, add missing keywords from
+	  mcs/mcs/cs-parser.jay, remove attribute regex because
+	  it fails to compile or work frequently
 	
 2003-11-28  Martin Willemoes Hansen  <mwh@sysrq.dk>
 
