@@ -1,8 +1,12 @@
 
 SUBDIRS=		gtksourceview
-EXTRA_DIST=		csharp.lang gtksourceview-sharp.pc.in
+EXTRA_DIST=		csharp.lang gtksourceview-sharp.pc.in $(mimeinfo_DATA)
 csharp_langdir= 	@gtksourceview_prefix@/share/gtksourceview-1.0/language-specs
 csharp_lang_DATA=	csharp.lang
 pkgconfigdir = @prefix@/lib/pkgconfig
 pkgconfig_DATA = gtksourceview-sharp.pc
+
+# should be the same as the gnome prefix
+mimeinfodir = @gtksourceview_prefix@/share/mime-info
+mimeinfo_DATA = gtksourceview-sharp.mime
 

@@ -1,3 +1,8 @@
+2004-02-20  John Luke  <jluke@cfl.rr.com>
+	
+	* makefile.am: install and dist gtksourceview-sharp.mime
+	* gtksourceview-sharp.mime: register the text/x-csharp mimetype
+
 2004-02-17  Todd Berman <tberman@sevenl.net>
 	
 	* Gtk.metadata: fixing Source.IterFindMatchingBracket.
