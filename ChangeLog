@@ -1,3 +1,9 @@
+2004-12-17  Todd Berman  <tberman@off.net>
+
+	* sources/makefile: Use gapi2-parser
+	* gtksourceview/gtksourceview-api.raw: Update api file to match new
+	parser output.
+
 2004-11-12  Todd Berman  <tberman@off.net>
 
 	* gtksourceview-sharp.pc.in: set the Requires: to -2.0 properly

@@ -28,6 +28,19 @@
           <parameter type="const-gchar*" name="tag_id"/>
         </parameters>
       </signal>
+      <virtual_method name="GetTagStyle" cname="get_tag_style">
+        <return-type type="GtkSourceTagStyle*"/>
+        <parameters>
+          <parameter type="GtkSourceStyleScheme*" name="scheme"/>
+          <parameter type="const-gchar*" name="style_name"/>
+        </parameters>
+      </virtual_method>
+      <virtual_method name="GetStyleNames" cname="get_style_names">
+        <return-type type="GSList*"/>
+        <parameters>
+          <parameter type="GtkSourceStyleScheme*" name="scheme"/>
+        </parameters>
+      </virtual_method>
       <method name="GetDefault" cname="gtk_source_style_scheme_get_default" shared="true">
         <return-type type="GtkSourceStyleScheme*"/>
       </method>
@@ -48,7 +61,7 @@
       </method>
     </interface>
     <object name="SourceUndoManager" cname="GtkSourceUndoManager" parent="GObject">
-      <field cname="priv" type="GtkSourceUndoManagerPrivate*"/>
+      <field name="Priv" cname="priv" type="GtkSourceUndoManagerPrivate*"/>
       <signal name="CanUndo" cname="can_undo" when="LAST">
         <return-type type="void"/>
         <parameters>
@@ -112,7 +125,7 @@
       </constructor>
     </object>
     <object name="SourceBuffer" cname="GtkSourceBuffer" parent="GtkTextBuffer">
-      <field cname="priv" type="GtkSourceBufferPrivate*"/>
+      <field name="Priv" cname="priv" type="GtkSourceBufferPrivate*"/>
       <property name="EscapeChar" cname="escape_char" type="unichar" readable="true" writeable="true"/>
       <property name="CheckBrackets" cname="check_brackets" type="gboolean" readable="true" writeable="true"/>
       <property name="Highlight" cname="highlight" type="gboolean" readable="true" writeable="true"/>
@@ -290,7 +303,7 @@
       </method>
     </object>
     <object name="SourceLanguage" cname="GtkSourceLanguage" parent="GObject">
-      <field cname="priv" type="GtkSourceLanguagePrivate*"/>
+      <field name="Priv" cname="priv" type="GtkSourceLanguagePrivate*"/>
       <signal name="TagStyleChanged" cname="tag_style_changed" when="LAST">
         <return-type type="void"/>
         <parameters>
@@ -355,7 +368,7 @@
       </method>
     </object>
     <object name="SourceLanguagesManager" cname="GtkSourceLanguagesManager" parent="GObject">
-      <field cname="priv" type="GtkSourceLanguagesManagerPrivate*"/>
+      <field name="Priv" cname="priv" type="GtkSourceLanguagesManagerPrivate*"/>
       <property name="LangFilesDirs" cname="lang_files_dirs" type="gpointer" readable="true" writeable="true" construct-only="true"/>
       <method name="GetAvailableLanguages" cname="gtk_source_languages_manager_get_available_languages">
         <return-type type="const-GSList*"/>
@@ -404,7 +417,7 @@
       </method>
     </object>
     <object name="SourcePrintJob" cname="GtkSourcePrintJob" parent="GObject">
-      <field cname="priv" type="GtkSourcePrintJobPrivate*"/>
+      <field name="Priv" cname="priv" type="GtkSourcePrintJobPrivate*"/>
       <property name="Config" cname="config" type="GnomePrintConfig" readable="true" writeable="true"/>
       <property name="Buffer" cname="buffer" type="GtkSourceBuffer" readable="true" writeable="true"/>
       <property name="TabsWidth" cname="tabs_width" type="guint" readable="true" writeable="true"/>
@@ -636,7 +649,7 @@
       </method>
     </object>
     <object name="SourceTagTable" cname="GtkSourceTagTable" parent="GtkTextTagTable">
-      <field cname="priv" type="GtkSourceTagTablePrivate*"/>
+      <field name="Priv" cname="priv" type="GtkSourceTagTablePrivate*"/>
       <signal name="Changed" cname="changed" when="LAST">
         <return-type type="void"/>
         <parameters>
@@ -658,7 +671,7 @@
       </method>
     </object>
     <object name="SourceView" cname="GtkSourceView" parent="GtkTextView">
-      <field cname="priv" type="GtkSourceViewPrivate*"/>
+      <field name="Priv" cname="priv" type="GtkSourceViewPrivate*"/>
       <property name="ShowLineNumbers" cname="show_line_numbers" type="gboolean" readable="true" writeable="true"/>
       <property name="ShowLineMarkers" cname="show_line_markers" type="gboolean" readable="true" writeable="true"/>
       <property name="TabsWidth" cname="tabs_width" type="guint" readable="true" writeable="true"/>
@@ -794,10 +807,10 @@
       </constructor>
     </object>
     <struct name="SourceBufferMatch" cname="GtkSourceBufferMatch">
-      <field cname="startpos" type="gint"/>
-      <field cname="endpos" type="gint"/>
-      <field cname="startindex" type="gint"/>
-      <field cname="endindex" type="gint"/>
+      <field name="Startpos" cname="startpos" type="gint"/>
+      <field name="Endpos" cname="endpos" type="gint"/>
+      <field name="Startindex" cname="startindex" type="gint"/>
+      <field name="Endindex" cname="endindex" type="gint"/>
     </struct>
     <struct name="SourceRegex" cname="GtkSourceRegex" opaque="true">
       <method name="Compile" cname="gtk_source_regex_compile" shared="true">
@@ -830,15 +843,15 @@
       </method>
     </struct>
     <boxed name="SourceTagStyle" cname="GtkSourceTagStyle">
-      <field cname="is_default" type="gboolean"/>
-      <field cname="mask" type="guint"/>
-      <field cname="foreground" type="GdkColor"/>
-      <field cname="background" type="GdkColor"/>
-      <field cname="italic" type="gboolean"/>
-      <field cname="bold" type="gboolean"/>
-      <field cname="underline" type="gboolean"/>
-      <field cname="strikethrough" type="gboolean"/>
-      <field cname="reserved" array_len="16" type="guint8"/>
+      <field name="IsDefault" cname="is_default" type="gboolean"/>
+      <field name="Mask" cname="mask" type="guint"/>
+      <field name="Foreground" cname="foreground" type="GdkColor"/>
+      <field name="Background" cname="background" type="GdkColor"/>
+      <field name="Italic" cname="italic" type="gboolean"/>
+      <field name="Bold" cname="bold" type="gboolean"/>
+      <field name="Underline" cname="underline" type="gboolean"/>
+      <field name="Strikethrough" cname="strikethrough" type="gboolean"/>
+      <field name="Reserved" cname="reserved" array_len="16" type="guint8"/>
       <method name="Copy" cname="gtk_source_tag_style_copy">
         <return-type type="GtkSourceTagStyle*"/>
       </method>
