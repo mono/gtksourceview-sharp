@@ -1,3 +1,10 @@
+2003-12-10  John Luke  <jluke@cfl.rr.com>
+
+	* csharp.lang: rearrange keywords into one group and
+	alphabetize somewhat, add missing keywords from
+	mcs/mcs/cs-parser.jay, remove attribute regex because
+	it fails to compile or work frequently
+	
 2003-11-28  Martin Willemoes Hansen  <mwh@sysrq.dk>
 
 	* gtksourceview/Gtk.metadata: Hide method GetLanguageFromMimeType

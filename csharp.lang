@@ -21,75 +21,96 @@
         	<end-regex>\*/</end-regex>
 	</block-comment>
 	
-	<keyword-list _name = "Declarations" style = "Keyword" case-sensitive="TRUE">
-		<keyword>using</keyword>
-		<keyword>namespace</keyword>
+	<keyword-list _name = "Keywords" style = "Keyword" case-sensitive="TRUE">
 		<keyword>class</keyword>
-		<keyword>struct</keyword>
-		<keyword>interface</keyword>
 		<keyword>delegate</keyword>
 		<keyword>enum</keyword>
-		<keyword>readonly</keyword>
-		<keyword>virtual</keyword>
-		<keyword>override</keyword>
+		<keyword>event</keyword>
+		<keyword>interface</keyword>
+		<keyword>namespace</keyword>
+		<keyword>struct</keyword>
+		<keyword>using</keyword>
+		<!--modifiers -->
+		<keyword>abstract</keyword>
+		<keyword>const</keyword>
+		<keyword>explicit</keyword>
 		<keyword>extern</keyword>
+		<keyword>fixed</keyword>
+		<keyword>implicit</keyword>
+		<keyword>internal</keyword>
+		<keyword>lock</keyword>
+		<keyword>out</keyword>
+		<keyword>override</keyword>
+		<keyword>params</keyword>
+		<keyword>private</keyword>
+		<keyword>protected</keyword>
+		<keyword>public</keyword>
+		<keyword>ref</keyword>
+		<keyword>sealed</keyword>
+		<keyword>static</keyword>
+		<keyword>readonly</keyword>
 		<keyword>unsafe</keyword>
+		<keyword>virtual</keyword>
+		<keyword>volatile</keyword>
+		<!-- others -->
+		<keyword>add</keyword>
+		<keyword>as</keyword>
+		<keyword>assembly</keyword>
+		<keyword>base</keyword>
+		<keyword>break</keyword>
+		<keyword>case</keyword>
+		<keyword>catch</keyword>
+		<keyword>checked</keyword>
+		<keyword>continue</keyword>
+		<keyword>default</keyword>
+		<keyword>do</keyword>
+		<keyword>else</keyword>
+		<keyword>false</keyword>
+		<keyword>finally</keyword>
+		<keyword>for</keyword>
+		<keyword>foreach</keyword>
+		<keyword>get</keyword>
+		<keyword>goto</keyword>
+		<keyword>if</keyword>
+		<keyword>in</keyword>
+		<keyword>is</keyword>
+		<keyword>new</keyword>
+		<keyword>null</keyword>
+		<keyword>remove</keyword>
+		<keyword>return</keyword>
+		<keyword>set</keyword>
+		<keyword>sizeof</keyword>
+		<keyword>stackalloc</keyword>
+		<keyword>super</keyword>
+		<keyword>switch</keyword>
+		<keyword>this</keyword>
+		<keyword>throw</keyword>
+		<keyword>true</keyword>
+		<keyword>try</keyword>
+		<keyword>typeof</keyword>
+		<keyword>unchecked</keyword>
+		<keyword>void</keyword>
+		<keyword>while</keyword>
+		<keyword>yield</keyword><!-- version 2 -->
 	</keyword-list>
 
 	<keyword-list _name = "Primitives" style = "Data Type" case-sensitive="TRUE">
-		<keyword>boolean</keyword>
 		<keyword>bool</keyword>
 		<keyword>byte</keyword>
 		<keyword>char</keyword>
+		<keyword>decimal</keyword>
 		<keyword>double</keyword>
 		<keyword>float</keyword>
 		<keyword>int</keyword>
-		<keyword>uint</keyword>
-		<keyword>decimal</keyword>
 		<keyword>long</keyword>
-		<keyword>ulong</keyword>
+		<keyword>object</keyword>
+		<keyword>operator</keyword>
+		<keyword>sbyte</keyword>
 		<keyword>short</keyword>
 		<keyword>string</keyword>
-	</keyword-list>
-
-	<keyword-list _name = "Flow" style = "Keyword" case-sensitive="TRUE">
-		<keyword>if</keyword>
-      	<keyword>else</keyword>
-		<keyword>switch</keyword>
-		<keyword>break</keyword>
-		<keyword>continue</keyword>
-		<keyword>return</keyword>
-		<keyword>case</keyword>
-		<keyword>for</keyword>
-		<keyword>do</keyword>
-		<keyword>while</keyword>
-		<keyword>foreach</keyword>
-		<keyword>this</keyword>
-		<keyword>base</keyword>
-		<keyword>super</keyword>
-		<keyword>new</keyword>
-		<keyword>try</keyword>
-		<keyword>catch</keyword>
-	</keyword-list>
-
-	<keyword-list _name = "Modifiers" style = "Keyword" case-sensitive="TRUE">
-		<keyword>static</keyword>
-		<keyword>public</keyword>
-		<keyword>protected</keyword>
-		<keyword>internal</keyword>
-		<keyword>private</keyword>
-		<keyword>abstract</keyword>
-		<keyword>sealed</keyword>
-	</keyword-list>
-
-	<keyword-list _name = "Memory" style = "Others" case-sensitive="TRUE">
-		<keyword>as</keyword>
-		<keyword>is</keyword>
-		<keyword>typeof</keyword>
-		<keyword>null</keyword>
-		<keyword>void</keyword>
-		<keyword>false</keyword>
-		<keyword>true</keyword>
+		<keyword>uint</keyword>
+		<keyword>ulong</keyword>
+		<keyword>ushort</keyword>
 	</keyword-list>
 
 	<keyword-list _name = "Preprocessor Definitions" style ="Preprocessor" case-sensitive="TRUE"
@@ -108,7 +129,4 @@
 		<keyword>endregion</keyword>
 	</keyword-list>	
 	
-	<pattern-item _name = "Attribute" style = "Keyword">
-		<regex>\[[a-zA-Z0-9-_]\]</regex>
-	</pattern-item>
 </language>
