@@ -1,3 +1,11 @@
+2003-11-28  Martin Willemoes Hansen  <mwh@sysrq.dk>
+
+	* gtksourceview/Gtk.metadata: Hide method GetLanguageFromMimeType
+	  to workaround a bug.
+	* gtksourceview/SourceLanguagesManager.custom: Added the above mentioned
+	  method with a new implementation, which fixes the bug.
+	* gtksourceview/gtksourceview-api.xml: Regenerated
+
 2003-11-20  Martin Willemoes Hansen  <mwh@sysrq.dk>
 
 	Initial Import.
