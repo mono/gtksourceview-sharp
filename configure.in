@@ -68,16 +68,6 @@ if test "x$GAPI_CODEGEN" = "xno"; then
 fi
 AC_SUBST(GAPI_CODEGEN)
 
-AC_PATH_PROG(MONODOC, monodoc, no)
-if test "x$MONODOC" = "xno"; then
-	if test "x$MONODOC" = "xno" ; then
-		AC_MSG_ERROR(['monodoc' not found.])
-	fi
-fi
-AC_SUBST(MONODOC)
-MONODOC_SOURCESDIR=`$MONODOC --get-sourcesdir`
-AC_SUBST(MONODOC_SOURCESDIR)
-
 AC_OUTPUT([
 makefile
 gtksourceview/makefile
