@@ -30,7 +30,7 @@ generated-stamp: $(APIS) *.custom *.metadata
 	--outdir=generated --customdir=. --assembly-name=gtksourceview-sharp && touch generated-stamp
 
 $(LIBRARY): generated-stamp
-	$(MCS) --unsafe -nowarn:0660,0661 --target library $(ASSEMBLIES) --recurse '*.cs' -o $(LIBRARY)
+	$(MCS) --unsafe --target library $(ASSEMBLIES) --recurse '*.cs' -o $(LIBRARY)
 
 install:
 	for i in $(APIS); do						\
