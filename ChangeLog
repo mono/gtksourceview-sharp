@@ -1,7 +1,9 @@
 2004-02-20  John Luke  <jluke@cfl.rr.com>
 	
 	* makefile.am: install and dist gtksourceview-sharp.mime
+	substitute gtksharp_prefix (which can be different than prefix)
 	* gtksourceview-sharp.mime: register the text/x-csharp mimetype
+	* gtksourceview/makefile.am: use gtksharp_prefix 
 
 2004-02-17  Todd Berman <tberman@sevenl.net>
 	

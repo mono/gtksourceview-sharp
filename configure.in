@@ -23,8 +23,10 @@ AC_SUBST(MONO_CFLAGS)
 AC_SUBST(MONO_LIBS)
 
 PKG_CHECK_MODULES(GTK_SHARP, gtk-sharp >= 0.14)
+gtksharp_prefix=`pkg-config --variable=prefix gtk-sharp`
 AC_SUBST(GTK_SHARP_CFLAGS)
 AC_SUBST(GTK_SHARP_LIBS)
+AC_SUBST(gtksharp_prefix)
 
 PKG_CHECK_MODULES(GTKSOURCEVIEW, gtksourceview-1.0 >= 0.7.0)
 AC_SUBST(GTKSOURCEVIEW_CFLAGS)
