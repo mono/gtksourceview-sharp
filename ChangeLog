@@ -1,3 +1,9 @@
+2004-06-01  Todd Berman  <tberman@sevenl.net>
+
+	* configure.in: require 0.8 of gtksourceview.
+	* makefile.am: remove csharp.lang, cleanup other extra lang files
+	* csharp.lang: removed, as its part of 0.8
+
 2004-05-31  Todd Berman  <tberman@sevenl.net>
 
 	* configure.in: bump deps, etc. dist 0.3

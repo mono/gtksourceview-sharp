@@ -69,7 +69,7 @@ AC_SUBST(GTK_SHARP_CFLAGS)
 AC_SUBST(GTK_SHARP_LIBS)
 AC_SUBST(gtksharp_prefix)
 
-PKG_CHECK_MODULES(GTKSOURCEVIEW, gtksourceview-1.0 >= 0.7.0)
+PKG_CHECK_MODULES(GTKSOURCEVIEW, gtksourceview-1.0 >= 0.8.0)
 AC_SUBST(GTKSOURCEVIEW_CFLAGS)
 AC_SUBST(GTKSOURCEVIEW_LIBS)
 gtksourceview_prefix=`pkg-config --variable=prefix gtksourceview-1.0`
