@@ -1,3 +1,4 @@
+
 SUBDIRS=		gtksourceview doc
 EXTRA_DIST=		nemerle.lang vbnet.lang gtksourceview-sharp.pc.in $(mimeinfo_DATA) gtk-sharp.snk
 
