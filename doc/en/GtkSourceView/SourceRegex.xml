@@ -39,48 +39,6 @@
         <remarks>To be added</remarks>
       </Docs>
     </Member>
-    <Member MemberName="Match">
-      <MemberSignature Language="C#" Value="public bool Match (string text, int pos, int len);" />
-      <MemberType>Method</MemberType>
-      <ReturnValue>
-        <ReturnType>System.Boolean</ReturnType>
-      </ReturnValue>
-      <Parameters>
-        <Parameter Name="text" Type="System.String" />
-        <Parameter Name="pos" Type="System.Int32" />
-        <Parameter Name="len" Type="System.Int32" />
-      </Parameters>
-      <Docs>
-        <summary>To be added</summary>
-        <param name="text">a <see cref="T:System.String" /></param>
-        <param name="pos">a <see cref="T:System.Int32" /></param>
-        <param name="len">a <see cref="T:System.Int32" /></param>
-        <returns>a <see cref="T:System.Boolean" /></returns>
-        <remarks>To be added</remarks>
-      </Docs>
-    </Member>
-    <Member MemberName="Search">
-      <MemberSignature Language="C#" Value="public int Search (string text, int pos, int length, GtkSourceView.SourceBufferMatch match);" />
-      <MemberType>Method</MemberType>
-      <ReturnValue>
-        <ReturnType>System.Int32</ReturnType>
-      </ReturnValue>
-      <Parameters>
-        <Parameter Name="text" Type="System.String" />
-        <Parameter Name="pos" Type="System.Int32" />
-        <Parameter Name="length" Type="System.Int32" />
-        <Parameter Name="match" Type="GtkSourceView.SourceBufferMatch" />
-      </Parameters>
-      <Docs>
-        <summary>To be added</summary>
-        <param name="text">a <see cref="T:System.String" /></param>
-        <param name="pos">a <see cref="T:System.Int32" /></param>
-        <param name="length">a <see cref="T:System.Int32" /></param>
-        <param name="match">a <see cref="T:GtkSourceView.SourceBufferMatch" /></param>
-        <returns>a <see cref="T:System.Int32" /></returns>
-        <remarks>To be added</remarks>
-      </Docs>
-    </Member>
     <Member MemberName="Destroy">
       <MemberSignature Language="C#" Value="public void Destroy ();" />
       <MemberType>Method</MemberType>
@@ -104,6 +62,52 @@
         <summary>To be added</summary>
         <param name="raw">a <see cref="T:System.IntPtr" /></param>
         <returns>a <see cref="T:GtkSourceView.SourceRegex" /></returns>
+        <remarks>To be added</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Match">
+      <MemberSignature Language="C#" Value="public bool Match (string text, int pos, int len, uint options);" />
+      <MemberType>Method</MemberType>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="text" Type="System.String" />
+        <Parameter Name="pos" Type="System.Int32" />
+        <Parameter Name="len" Type="System.Int32" />
+        <Parameter Name="options" Type="System.UInt32" />
+      </Parameters>
+      <Docs>
+        <summary>To be added</summary>
+        <param name="text">a <see cref="T:System.String" /></param>
+        <param name="pos">a <see cref="T:System.Int32" /></param>
+        <param name="len">a <see cref="T:System.Int32" /></param>
+        <param name="options">a <see cref="T:System.UInt32" /></param>
+        <returns>a <see cref="T:System.Boolean" /></returns>
+        <remarks>To be added</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Search">
+      <MemberSignature Language="C#" Value="public int Search (string text, int pos, int length, GtkSourceView.SourceBufferMatch match, uint options);" />
+      <MemberType>Method</MemberType>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="text" Type="System.String" />
+        <Parameter Name="pos" Type="System.Int32" />
+        <Parameter Name="length" Type="System.Int32" />
+        <Parameter Name="match" Type="GtkSourceView.SourceBufferMatch" />
+        <Parameter Name="options" Type="System.UInt32" />
+      </Parameters>
+      <Docs>
+        <summary>To be added</summary>
+        <param name="text">a <see cref="T:System.String" /></param>
+        <param name="pos">a <see cref="T:System.Int32" /></param>
+        <param name="length">a <see cref="T:System.Int32" /></param>
+        <param name="match">a <see cref="T:GtkSourceView.SourceBufferMatch" /></param>
+        <param name="options">a <see cref="T:System.UInt32" /></param>
+        <returns>a <see cref="T:System.Int32" /></returns>
         <remarks>To be added</remarks>
       </Docs>
     </Member>

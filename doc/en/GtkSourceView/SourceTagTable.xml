@@ -26,21 +26,6 @@
   </Interfaces>
   <Attributes />
   <Members>
-    <Member MemberName="OverrideChanged">
-      <MemberSignature Language="C#" Value="protected static void OverrideChanged (GLib.GType gtype);" />
-      <MemberType>Method</MemberType>
-      <ReturnValue>
-        <ReturnType>System.Void</ReturnType>
-      </ReturnValue>
-      <Parameters>
-        <Parameter Name="gtype" Type="GLib.GType" />
-      </Parameters>
-      <Docs>
-        <summary>To be added</summary>
-        <param name="gtype">a <see cref="T:GLib.GType" /></param>
-        <remarks>To be added</remarks>
-      </Docs>
-    </Member>
     <Member MemberName="Finalize">
       <MemberSignature Language="C#" Value="protected override void Finalize ();" />
       <MemberType>Method</MemberType>
@@ -74,21 +59,6 @@
       <Parameters />
       <Docs>
         <summary>To be added</summary>
-        <remarks>To be added</remarks>
-      </Docs>
-    </Member>
-    <Member MemberName="AddTags">
-      <MemberSignature Language="C#" Value="public void AddTags (GLib.SList tags);" />
-      <MemberType>Method</MemberType>
-      <ReturnValue>
-        <ReturnType>System.Void</ReturnType>
-      </ReturnValue>
-      <Parameters>
-        <Parameter Name="tags" Type="GLib.SList" />
-      </Parameters>
-      <Docs>
-        <summary>To be added</summary>
-        <param name="tags">a <see cref="T:GLib.SList" /></param>
         <remarks>To be added</remarks>
       </Docs>
     </Member>
@@ -153,6 +123,21 @@
       <Parameters />
       <Docs>
         <summary>To be added</summary>
+        <remarks>To be added</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="AddTags">
+      <MemberSignature Language="C#" Value="public void AddTags (GtkSourceView.SourceTag[] tags);" />
+      <MemberType>Method</MemberType>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="tags" Type="GtkSourceView.SourceTag[]" />
+      </Parameters>
+      <Docs>
+        <summary>To be added</summary>
+        <param name="tags">a <see cref="T:GtkSourceView.SourceTag" /></param>
         <remarks>To be added</remarks>
       </Docs>
     </Member>

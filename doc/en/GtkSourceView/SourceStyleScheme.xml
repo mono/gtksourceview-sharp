@@ -37,19 +37,6 @@
         <remarks>To be added</remarks>
       </Docs>
     </Member>
-    <Member MemberName="StyleNames">
-      <MemberSignature Language="C#" Value="public virtual GLib.SList StyleNames { get; };" />
-      <MemberType>Property</MemberType>
-      <ReturnValue>
-        <ReturnType>GLib.SList</ReturnType>
-      </ReturnValue>
-      <Parameters />
-      <Docs>
-        <summary>To be added</summary>
-        <returns>a <see cref="T:GLib.SList" /></returns>
-        <remarks>To be added</remarks>
-      </Docs>
-    </Member>
     <Member MemberName="Name">
       <MemberSignature Language="C#" Value="public virtual string Name { get; };" />
       <MemberType>Property</MemberType>
@@ -72,6 +59,19 @@
       <Parameters />
       <Docs>
         <summary>To be added</summary>
+        <remarks>To be added</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="StyleNames">
+      <MemberSignature Language="C#" Value="public virtual string [] StyleNames { get; };" />
+      <MemberType>Property</MemberType>
+      <ReturnValue>
+        <ReturnType>System.String[]</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>To be added</summary>
+        <returns>a <see cref="T:System.String[]" /></returns>
         <remarks>To be added</remarks>
       </Docs>
     </Member>

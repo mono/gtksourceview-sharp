@@ -120,15 +120,15 @@
       </Docs>
     </Member>
     <Member MemberName="AvailableLanguages">
-      <MemberSignature Language="C#" Value="public GLib.SList AvailableLanguages { get; };" />
+      <MemberSignature Language="C#" Value="public GtkSourceView.SourceLanguage [] AvailableLanguages { get; };" />
       <MemberType>Property</MemberType>
       <ReturnValue>
-        <ReturnType>GLib.SList</ReturnType>
+        <ReturnType>GtkSourceView.SourceLanguage[]</ReturnType>
       </ReturnValue>
       <Parameters />
       <Docs>
         <summary>To be added</summary>
-        <returns>a <see cref="T:GLib.SList" /></returns>
+        <returns>a <see cref="T:GtkSourceView.SourceLanguage[]" /></returns>
         <remarks>To be added</remarks>
       </Docs>
     </Member>

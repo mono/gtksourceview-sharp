@@ -63,8 +63,19 @@
         <remarks>To be added</remarks>
       </Docs>
     </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public Global ();" />
+      <MemberType>Constructor</MemberType>
+      <ReturnValue />
+      <Parameters />
+      <Docs>
+        <summary>To be added</summary>
+        <returns>a <see cref="T:GtkSourceView.Global" /></returns>
+        <remarks>To be added</remarks>
+      </Docs>
+    </Member>
     <Member MemberName="KeywordListTagNew">
-      <MemberSignature Language="C#" Value="public static Gtk.TextTag KeywordListTagNew (string id, string name, GLib.SList keywords, bool case_sensitive, bool match_empty_string_at_beginning, bool match_empty_string_at_end, string beginning_regex, string end_regex);" />
+      <MemberSignature Language="C#" Value="public static Gtk.TextTag KeywordListTagNew (string id, string name, string [] keywords, bool case_sensitive, bool match_empty_string_at_beginning, bool match_empty_string_at_end, string beginning_regex, string end_regex);" />
       <MemberType>Method</MemberType>
       <ReturnValue>
         <ReturnType>Gtk.TextTag</ReturnType>
@@ -72,7 +83,7 @@
       <Parameters>
         <Parameter Name="id" Type="System.String" />
         <Parameter Name="name" Type="System.String" />
-        <Parameter Name="keywords" Type="GLib.SList" />
+        <Parameter Name="keywords" Type="System.String[]" />
         <Parameter Name="case_sensitive" Type="System.Boolean" />
         <Parameter Name="match_empty_string_at_beginning" Type="System.Boolean" />
         <Parameter Name="match_empty_string_at_end" Type="System.Boolean" />
@@ -83,24 +94,13 @@
         <summary>To be added</summary>
         <param name="id">a <see cref="T:System.String" /></param>
         <param name="name">a <see cref="T:System.String" /></param>
-        <param name="keywords">a <see cref="T:GLib.SList" /></param>
+        <param name="keywords">a <see cref="T:System.String" /></param>
         <param name="case_sensitive">a <see cref="T:System.Boolean" /></param>
         <param name="match_empty_string_at_beginning">a <see cref="T:System.Boolean" /></param>
         <param name="match_empty_string_at_end">a <see cref="T:System.Boolean" /></param>
         <param name="beginning_regex">a <see cref="T:System.String" /></param>
         <param name="end_regex">a <see cref="T:System.String" /></param>
         <returns>a <see cref="T:Gtk.TextTag" /></returns>
-        <remarks>To be added</remarks>
-      </Docs>
-    </Member>
-    <Member MemberName=".ctor">
-      <MemberSignature Language="C#" Value="public Global ();" />
-      <MemberType>Constructor</MemberType>
-      <ReturnValue />
-      <Parameters />
-      <Docs>
-        <summary>To be added</summary>
-        <returns>a <see cref="T:GtkSourceView.Global" /></returns>
         <remarks>To be added</remarks>
       </Docs>
     </Member>

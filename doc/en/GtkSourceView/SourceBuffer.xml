@@ -28,66 +28,6 @@ By default highlighting is enabled, but you can disable it with <see cref="P:Gtk
   </Interfaces>
   <Attributes />
   <Members>
-    <Member MemberName="OverrideCanUndoFired">
-      <MemberSignature Language="C#" Value="protected static void OverrideCanUndoFired (GLib.GType gtype);" />
-      <MemberType>Method</MemberType>
-      <ReturnValue>
-        <ReturnType>System.Void</ReturnType>
-      </ReturnValue>
-      <Parameters>
-        <Parameter Name="gtype" Type="GLib.GType" />
-      </Parameters>
-      <Docs>
-        <summary>To be added</summary>
-        <param name="gtype">a <see cref="T:GLib.GType" /></param>
-        <remarks>To be added</remarks>
-      </Docs>
-    </Member>
-    <Member MemberName="OverrideHighlightUpdated">
-      <MemberSignature Language="C#" Value="protected static void OverrideHighlightUpdated (GLib.GType gtype);" />
-      <MemberType>Method</MemberType>
-      <ReturnValue>
-        <ReturnType>System.Void</ReturnType>
-      </ReturnValue>
-      <Parameters>
-        <Parameter Name="gtype" Type="GLib.GType" />
-      </Parameters>
-      <Docs>
-        <summary>To be added</summary>
-        <param name="gtype">a <see cref="T:GLib.GType" /></param>
-        <remarks>To be added</remarks>
-      </Docs>
-    </Member>
-    <Member MemberName="OverrideCanRedoFired">
-      <MemberSignature Language="C#" Value="protected static void OverrideCanRedoFired (GLib.GType gtype);" />
-      <MemberType>Method</MemberType>
-      <ReturnValue>
-        <ReturnType>System.Void</ReturnType>
-      </ReturnValue>
-      <Parameters>
-        <Parameter Name="gtype" Type="GLib.GType" />
-      </Parameters>
-      <Docs>
-        <summary>To be added</summary>
-        <param name="gtype">a <see cref="T:GLib.GType" /></param>
-        <remarks>To be added</remarks>
-      </Docs>
-    </Member>
-    <Member MemberName="OverrideMarkerUpdated">
-      <MemberSignature Language="C#" Value="protected static void OverrideMarkerUpdated (GLib.GType gtype);" />
-      <MemberType>Method</MemberType>
-      <ReturnValue>
-        <ReturnType>System.Void</ReturnType>
-      </ReturnValue>
-      <Parameters>
-        <Parameter Name="gtype" Type="GLib.GType" />
-      </Parameters>
-      <Docs>
-        <summary>To be added</summary>
-        <param name="gtype">a <see cref="T:GLib.GType" /></param>
-        <remarks>To be added</remarks>
-      </Docs>
-    </Member>
     <Member MemberName="Finalize">
       <MemberSignature Language="C#" Value="protected override void Finalize ();" />
       <MemberType>Method</MemberType>
@@ -287,24 +227,6 @@ By default highlighting is enabled, but you can disable it with <see cref="P:Gtk
       <Parameters />
       <Docs>
         <summary>To be added</summary>
-        <remarks>To be added</remarks>
-      </Docs>
-    </Member>
-    <Member MemberName="GetMarkersInRegion">
-      <MemberSignature Language="C#" Value="public GLib.SList GetMarkersInRegion (Gtk.TextIter begin, Gtk.TextIter end);" />
-      <MemberType>Method</MemberType>
-      <ReturnValue>
-        <ReturnType>GLib.SList</ReturnType>
-      </ReturnValue>
-      <Parameters>
-        <Parameter Name="begin" Type="Gtk.TextIter" />
-        <Parameter Name="end" Type="Gtk.TextIter" />
-      </Parameters>
-      <Docs>
-        <summary>To be added</summary>
-        <param name="begin">a <see cref="T:Gtk.TextIter" /></param>
-        <param name="end">a <see cref="T:Gtk.TextIter" /></param>
-        <returns>a <see cref="T:GLib.SList" /></returns>
         <remarks>To be added</remarks>
       </Docs>
     </Member>
@@ -627,6 +549,24 @@ By default highlighting is enabled, but you can disable it with <see cref="P:Gtk
       <Parameters />
       <Docs>
         <summary>To be added</summary>
+        <remarks>To be added</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetMarkersInRegion">
+      <MemberSignature Language="C#" Value="public GtkSourceView.SourceMarker[] GetMarkersInRegion (Gtk.TextIter begin, Gtk.TextIter end);" />
+      <MemberType>Method</MemberType>
+      <ReturnValue>
+        <ReturnType>GtkSourceView.SourceMarker[]</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="begin" Type="Gtk.TextIter" />
+        <Parameter Name="end" Type="Gtk.TextIter" />
+      </Parameters>
+      <Docs>
+        <summary>To be added</summary>
+        <param name="begin">a <see cref="T:Gtk.TextIter" /></param>
+        <param name="end">a <see cref="T:Gtk.TextIter" /></param>
+        <returns>a <see cref="T:GtkSourceView.SourceMarker[]" /></returns>
         <remarks>To be added</remarks>
       </Docs>
     </Member>
