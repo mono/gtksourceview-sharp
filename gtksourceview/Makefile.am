@@ -58,9 +58,6 @@ $(LIBRARY): generated-stamp $(build_sources) gtk-sharp.snk
 
 CLEANFILES = $(LIBRARY) generated/*.cs generated-stamp gtksourceview-api.xml gtk-sharp.snk
 
-distclean-local:
-	rm -f makefile
-
 install-data-local:
 	echo "$(GACUTIL) /i $(LIBRARY) /f $(GACUTIL_FLAGS)";  \
 	$(GACUTIL) /i $(LIBRARY) /f $(GACUTIL_FLAGS) || exit 1;

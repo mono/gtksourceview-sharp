@@ -1,3 +1,10 @@
+2004-11-11  John Luke  <john.luke@gmail.com>
+
+	* configure.in: output Makefiles not makefiles
+	* makefile.am:	rename to Makefile.am
+	* gtksourceview/makefile.am: rename to Makefile.am
+	and remove distcleanl-local workaround
+
 2004-08-17  John Luke  <john.luke@gmail.com>
 
 	* gtksourceview-sharp.pc.in: add requires gnome-sharp

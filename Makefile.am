@@ -12,5 +12,3 @@ pkgconfig_DATA = gtksourceview-sharp.pc
 mimeinfodir = @gtksourceview_prefix@/share/mime-info
 mimeinfo_DATA = gtksourceview-sharp.mime gtksourceview-sharp.keys
 
-distclean-local:
-	rm -f makefile

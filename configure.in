@@ -119,10 +119,10 @@ AC_SUBST(API_VERSION)
 AM_CONDITIONAL(ENABLE_MONODOC, test "x$enable_monodoc" = "xyes")
 
 AC_OUTPUT([
-makefile
+Makefile
 gtksourceview/AssemblyInfo.cs
 gtksourceview/gtksourceview-sharp.dll.config
-gtksourceview/makefile
+gtksourceview/Makefile
 gtksourceview-sharp.pc
 doc/Makefile
 ])
