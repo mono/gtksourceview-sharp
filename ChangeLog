@@ -1,4 +1,10 @@
-2004-05-25  Pawel Rozanski  <tokugawa@afn.no-ip.org>
+2004-04-27  Todd Berman  <tberman@sevenl.net>
+
+	* Gtk/Gtk.metadata: change namespace to GtkSourceView.
+	* SourceBuffer.custom: update to reflect namespace change.
+	* GtkSourceView.cs: update to reflect namespace change.
+
+2004-04-25  Pawel Rozanski  <tokugawa@afn.no-ip.org>
 
 	* Makefile.am: add nemerle.lang
 	* nemerle.lang: add lanuage file

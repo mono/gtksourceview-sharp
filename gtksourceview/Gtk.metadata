@@ -6,4 +6,5 @@
   <attr path="//object[@cname='GtkSourceUndoManager']/signal[@name='CanRedo']" name="name">CanRedoFired</attr>
   <attr path="//object[@cname='GtkSourceUndoManager']/signal[@name='CanUndo']" name="name">CanUndoFired</attr>
   <attr path="/api/namespace/class[@name='Source']/method[@name='IterFindMatchingBracket']/*/*[@type='GtkTextIter*']" name="pass_as">ref</attr>
+  <attr path="//namespace" name="name">GtkSourceView</attr>
 </metadata>
