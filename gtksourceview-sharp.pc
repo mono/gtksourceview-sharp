@@ -1,0 +1,9 @@
+prefix=/mono
+exec_prefix=${prefix}
+libdir=${exec_prefix}/lib
+
+
+Name: Gtk#
+Description: Gtk# - GNOME .NET Binding
+Version: 0.1.0
+Libs: -L${exec_prefix}/lib -r:gtksourview-sharp

@@ -29,6 +29,8 @@ AC_SUBST(GTK_SHARP_LIBS)
 PKG_CHECK_MODULES(GTKSOURCEVIEW, gtksourceview-1.0 >= 0.7.0)
 AC_SUBST(GTKSOURCEVIEW_CFLAGS)
 AC_SUBST(GTKSOURCEVIEW_LIBS)
+gtksourceview_prefix=`pkg-config --variable=prefix gtksourceview-1.0`
+AC_SUBST(gtksourceview_prefix)
 
 AC_PATH_PROG(MCS, mcs, no)
 if test "x$MCS" = "xno"; then
@@ -79,4 +81,5 @@ AC_SUBST(MONODOC_SOURCESDIR)
 AC_OUTPUT([
 makefile
 gtksourceview/makefile
+gtksourceview-sharp.pc
 ])
