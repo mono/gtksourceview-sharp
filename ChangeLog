@@ -1,3 +1,8 @@
+2005-01-08  Mike Kestner  <mkestner@novell.com>
+
+	* configure.in : use cflags instead of grabbing the gapi prefix.
+	* gtksourceview/Makefile.am : use new pc Cflags for generation.
+
 2005-01-06  Raja R Harinath  <rharinath@novell.com>
 
 	* gtksourceview/Makefile.am (sources): Move AssemblyInfo.cs ...

@@ -2,16 +2,7 @@ LIBRARY_NAME=	gtksourceview-sharp
 LIBRARY=	$(LIBRARY_NAME).dll
 APIS=		gtksourceview-api.xml
 
-INCLUDE_APIS=	$(gtksharp_prefix)/share/gapi-2.0/atk-api.xml		\
-		$(gtksharp_prefix)/share/gapi-2.0/gdk-api.xml		\
-		$(gtksharp_prefix)/share/gapi-2.0/gdk-symbols.xml	\
-		$(gtksharp_prefix)/share/gapi-2.0/gnome-api.xml	\
-		$(gtksharp_prefix)/share/gapi-2.0/gtk-api.xml		\
-		$(gtksharp_prefix)/share/gapi-2.0/gtk-symbols.xml	\
-		$(gtksharp_prefix)/share/gapi-2.0/pango-api.xml
-
-ASSEMBLIES=	/pkg:gtk-sharp-2.0		\
-		/pkg:gnome-sharp-2.0
+ASSEMBLIES=	/pkg:gnome-sharp-2.0
 
 EXTRA_DIST = $(sources) $(customs) Gtk.metadata gtksourceview-api.raw AssemblyInfo.cs.in
 
@@ -30,7 +21,7 @@ gtksourceview-api.xml:
 	$(GAPI_FIXUP) --api=gtksourceview-api.xml --metadata=$(srcdir)/Gtk.metadata
 
 generated-stamp: $(APIS) $(customs) $(sources) Gtk.metadata
-	$(GAPI_CODEGEN) --include $(INCLUDE_APIS) --generate $(APIS) \
+	$(GAPI_CODEGEN) $(GTK_SHARP_CFLAGS) --generate $(APIS) \
 	--outdir=generated --customdir=. --assembly-name=gtksourceview-sharp && touch generated-stamp
 
 sources = \
