@@ -2,6 +2,8 @@
 
 	* gtksourceview/makefile.am: add new .custom files
 	* gtksourceview/Gtk.metadata: hide some things that belong in .custom
+	* gtksourceview/Global.custom:
+	* gtksourceview/SourceTagTable.custom:
 	* gtksourceview/SourceLanguage.custom:
 	* gtksourceview/SourceLanguagesManager.custom: replace GLib.SList
 	returns with arrays of the appropriate types

@@ -40,9 +40,12 @@ AssemblyInfo.cs
 build_sources = $(addprefix $(srcdir)/, $(sources))
 
 customs = \
+Global.custom \
 SourceBuffer.custom \
 SourceLanguage.custom \
-SourceLanguagesManager.custom
+SourceLanguagesManager.custom \
+SourceStyleScheme.custom \
+SourceTagTable.custom
 
 build_customs = $(addprefix $(srcdir)/, $(customs))
 
