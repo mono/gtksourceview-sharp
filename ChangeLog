@@ -1,3 +1,7 @@
+2005-03-12  Todd Berman  <tberman@off.net>
+
+	* configure.in: Push 0.7
+
 2005-02-07  John Luke <john.luke@gmail.com>
 
 	* sample/Makefile.am:

@@ -1,7 +1,7 @@
 AC_INIT(README)
 AC_CANONICAL_SYSTEM
 AC_PROG_LIBTOOL
-AM_INIT_AUTOMAKE(gtksourceview-sharp, 0.6.99)
+AM_INIT_AUTOMAKE(gtksourceview-sharp, 0.7)
 AM_MAINTAINER_MODE
 
 dnl Defines CC to avoid warnings
@@ -55,7 +55,7 @@ if test "x$GACUTIL" = "xno" ; then
 	AC_MSG_ERROR([No gacutil tool found])
 fi
 
-GACUTIL_FLAGS='/package gtk-sharp /gacdir $(libdir)'
+GACUTIL_FLAGS='/package gtksourceview-sharp /gacdir $(libdir)'
                                      
 AC_SUBST(RUNTIME)
 AC_SUBST(CSC)
@@ -123,7 +123,7 @@ Makefile
 gtksourceview/AssemblyInfo.cs
 gtksourceview/gtksourceview-sharp.dll.config
 gtksourceview/Makefile
-gtksourceview-sharp.pc
+gtksourceview-sharp-2.0.pc
 doc/Makefile
 sample/Makefile
 ])

@@ -7,4 +7,4 @@ Name: GtkSourceView#
 Description: GtkSourceView# - gtksourceview .NET Binding
 Version: @VERSION@
 Requires: gnome-sharp-2.0
-Libs: -r:${libdir}/mono/gtk-sharp/gtksourceview-sharp.dll
+Libs: -r:${libdir}/mono/gtksourceview-sharp/gtksourceview-sharp.dll
