@@ -1,3 +1,7 @@
+2004-02-16  Martin Willemoes Hansen  <mwh@sysrq.dk>
+
+	* configure.in: gapi_codegen should be gapi-codegen, fixed.
+
 2004-02-12  Todd Berman <tberman@sevenl.net>
 
 	* configure.in: removing monodoc requirement, as its not even used.
