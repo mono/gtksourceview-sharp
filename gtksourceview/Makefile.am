@@ -2,16 +2,16 @@ LIBRARY_NAME=	gtksourceview-sharp
 LIBRARY=	$(LIBRARY_NAME).dll
 APIS=		gtksourceview-api.xml
 
-INCLUDE_APIS=	@gtksharp_prefix@/share/gapi/atk-api.xml		\
-		@gtksharp_prefix@/share/gapi/gdk-api.xml		\
-		@gtksharp_prefix@/share/gapi/gdk-symbols.xml	\
-		@gtksharp_prefix@/share/gapi/gnome-api.xml	\
-		@gtksharp_prefix@/share/gapi/gtk-api.xml		\
-		@gtksharp_prefix@/share/gapi/gtk-symbols.xml	\
-		@gtksharp_prefix@/share/gapi/pango-api.xml
+INCLUDE_APIS=	@gtksharp_prefix@/share/gapi-2.0/atk-api.xml		\
+		@gtksharp_prefix@/share/gapi-2.0/gdk-api.xml		\
+		@gtksharp_prefix@/share/gapi-2.0/gdk-symbols.xml	\
+		@gtksharp_prefix@/share/gapi-2.0/gnome-api.xml	\
+		@gtksharp_prefix@/share/gapi-2.0/gtk-api.xml		\
+		@gtksharp_prefix@/share/gapi-2.0/gtk-symbols.xml	\
+		@gtksharp_prefix@/share/gapi-2.0/pango-api.xml
 
-ASSEMBLIES=	/pkg:gtk-sharp		\
-		/pkg:gnome-sharp
+ASSEMBLIES=	/pkg:gtk-sharp-2.0		\
+		/pkg:gnome-sharp-2.0
 
 EXTRA_DIST = $(sources) $(customs) Gtk.metadata gtksourceview-api.raw AssemblyInfo.cs.in
 
@@ -19,7 +19,7 @@ DISTCLEANFILES = AssemblyInfo.cs
 
 noinst_DATA = gtksourceview-sharp.dll
 
-apidir = @gtksharp_prefix@/share/gapi
+apidir = @gtksharp_prefix@/share/gapi-2.0
 api_DATA = gtksourceview-api.xml
 
 all: $(LIBRARY)
