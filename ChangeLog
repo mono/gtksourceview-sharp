@@ -1,3 +1,11 @@
+2004-07-03  John Luke  <jluke@cfl.rr.com>
+
+	* gtksourceview/makefile.am: add new .custom files
+	* gtksourceview/Gtk.metadata: hide some things that belong in .custom
+	* gtksourceview/SourceLanguage.custom:
+	* gtksourceview/SourceLanguagesManager.custom: replace GLib.SList
+	returns with arrays of the appropriate types
+
 2004-07-02  John Luke  <jluke@cfl.rr.com>
 
 	* gtksourceview/Gtk.metadata: hide SourceBuffer.GetMarkersAtRegion

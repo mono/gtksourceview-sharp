@@ -33,10 +33,17 @@ generated-stamp: $(APIS) $(customs) $(sources) Gtk.metadata
 	$(GAPI_CODEGEN) --include $(INCLUDE_APIS) --generate $(APIS) \
 	--outdir=generated --customdir=. --assembly-name=gtksourceview-sharp && touch generated-stamp
 
-sources = GtkSourceView.cs AssemblyInfo.cs
+sources = \
+GtkSourceView.cs \
+AssemblyInfo.cs
+
 build_sources = $(addprefix $(srcdir)/, $(sources))
 
-customs = SourceBuffer.custom
+customs = \
+SourceBuffer.custom \
+SourceLanguage.custom \
+SourceLanguagesManager.custom
+
 build_customs = $(addprefix $(srcdir)/, $(customs))
 
 gtk-sharp.snk: $(top_srcdir)/gtk-sharp.snk
