@@ -1,11 +1,15 @@
 2004-04-30  John Luke  <jluke@cfl.rr.com>
 
+	* autogen.sh: add --enable-maintainer-mode to configure
 	* configure.in: update to be like Gtk# cvs
 	output AssemblyInfo.cs and the config file
 	dep on Gtk# 0.18.99
+	add monodoc conditional stuff from Gtk#
 	* gtksourceview/makefile.am: use $CSC instead of $MCS
 	* gtksourceview/.cvsignore: ignore AssemblyInfo.cs and
 	gtksourceview-sharp.dll.config
+	* docs/*: add stubs and stuff to build and install with
+	monodoc
 	
 2004-04-27  Todd Berman  <tberman@sevenl.net>
 

@@ -2,4 +2,4 @@ aclocal
 libtoolize --force --copy
 automake -a
 autoconf
-./configure $*
+./configure --enable-maintainer-mode $*

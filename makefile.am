@@ -1,5 +1,5 @@
 
-SUBDIRS=		gtksourceview
+SUBDIRS=		gtksourceview doc
 EXTRA_DIST=		csharp.lang nemerle.lang vbnet.lang gtksourceview-sharp.pc.in $(mimeinfo_DATA)
 csharp_langdir= 	@gtksourceview_prefix@/share/gtksourceview-1.0/language-specs
 csharp_lang_DATA=	csharp.lang
