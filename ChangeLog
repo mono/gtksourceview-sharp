@@ -1,3 +1,10 @@
+2004-07-05  Todd Berman  <tberman@off.net>
+
+	* configure.in:
+	* gtksourceview-sharp.pc.in:
+	* makefile.am: Patches from Marcin Krzyzanowski <krzak@pld-linux.org>
+	to fix various libdir and mono vs mint issues.
+
 2004-07-03  John Luke  <jluke@cfl.rr.com>
 
 	* gtksourceview/makefile.am: add new .custom files
