@@ -4,3 +4,15 @@ text/x-csharp
 	default_action_type=application
 	description=C# source code
 	short_list_application_ids_for_novice_user_level=monodevelop,anjuta,gedit
+text/x-nemerle
+	category=Software Development/Source Code
+	can_be_executable=false
+	default_action_type=application
+	description=Nemerle source code
+	short_list_application_ids_for_novice_user_level=monodevelop,gedit
+text/x-vb
+	category=Software Development/Source Code
+	can_be_executable=false
+	default_action_type=application
+	description=VB.NET source code
+	short_list_application_ids_for_novice_user_level=monodevelop,gedit

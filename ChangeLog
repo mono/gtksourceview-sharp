@@ -1,4 +1,12 @@
-2004-04-27  John Luke  <jluke@cfl.rr.com.
+2004-05-25  Pawel Rozanski  <tokugawa@afn.no-ip.org>
+
+	* Makefile.am: add nemerle.lang
+	* nemerle.lang: add lanuage file
+	* vbnet.lang: changed mimetypes to text/x-vb	
+	* gtksourceview-sharp.mime: mime for nemerle/vbnet
+	* gtksourceview-sharp.keys: keys for nemerle/vbnet
+
+2004-04-27  John Luke  <jluke@cfl.rr.com>
 
 	* Makefile.am: add vbnet.lang
 	* vbnet.lang: add language file

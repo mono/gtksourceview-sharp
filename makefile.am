@@ -1,8 +1,12 @@
 
 SUBDIRS=		gtksourceview
-EXTRA_DIST=		csharp.lang gtksourceview-sharp.pc.in $(mimeinfo_DATA)
+EXTRA_DIST=		csharp.lang nemerle.lang vbnet.lang gtksourceview-sharp.pc.in $(mimeinfo_DATA)
 csharp_langdir= 	@gtksourceview_prefix@/share/gtksourceview-1.0/language-specs
 csharp_lang_DATA=	csharp.lang
+nemerle_langdir= 	@gtksourceview_prefix@/share/gtksourceview-1.0/language-specs
+nemerle_lang_DATA=	nemerle.lang
+vbnet_langdir= 		@gtksourceview_prefix@/share/gtksourceview-1.0/language-specs
+vbnet_lang_DATA=	vbnet.lang
 pkgconfigdir = @prefix@/lib/pkgconfig
 pkgconfig_DATA = gtksourceview-sharp.pc
 

@@ -1,2 +1,6 @@
 text/x-csharp
 	ext: cs
+text/x-nemerle
+	ext: n
+text/x-vb
+	ext: vb
