@@ -3,3 +3,4 @@ makefile
 *.dll
 generated
 generated-stamp
+gtksourceview-api.xml

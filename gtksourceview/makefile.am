@@ -16,7 +16,7 @@ ASSEMBLIES=	-r atk-sharp.dll	\
 		-r gnome-sharp.dll	\
 		-r pango-sharp.dll
 
-EXTRA_DIST = GtkSourceView.cs *.custom *.metadata *.xml
+EXTRA_DIST = $(sources) $(customs) Gtk.metadata gtksourceview-api.raw
 
 gtksourceviewsharpdir = $(libdir)
 gtksourceviewsharp_DATA = gtksourceview-sharp.dll
@@ -26,13 +26,27 @@ api_DATA = gtksourceview-api.xml
 
 all: $(LIBRARY)
 
-generated-stamp: $(APIS) *.custom *.metadata
-	$(GAPI_FIXUP) --api=gtksourceview-api.xml --metadata=Gtk.metadata && \
+gtksourceview-api.xml:
+	cp $(srcdir)/gtksourceview-api.raw gtksourceview-api.xml
+	chmod u+w gtksourceview-api.xml
+	$(GAPI_FIXUP) --api=gtksourceview-api.xml --metadata=$(srcdir)/Gtk.metadata
+
+generated-stamp: $(APIS) $(customs) $(sources) Gtk.metadata
 	$(GAPI_CODEGEN) --include $(INCLUDE_APIS) --generate $(APIS) \
 	--outdir=generated --customdir=. --assembly-name=gtksourceview-sharp && touch generated-stamp
 
-$(LIBRARY): generated-stamp
-	$(MCS) --unsafe --target library $(ASSEMBLIES) --recurse '*.cs' -o $(LIBRARY)
+sources = GtkSourceView.cs
+build_sources = $(addprefix $(srcdir)/, $(sources))
 
-clean:
-	rm -rf $(LIBRARY) generated generated-stamp
+customs = SourceBuffer.custom
+build_customs = $(addprefix $(srcdir)/, $(customs))
+
+$(LIBRARY): generated-stamp $(build_sources)
+	$(MCS) --unsafe --target library $(ASSEMBLIES) \
+	generated/*.cs $(build_source) -o $(LIBRARY)
+
+CLEANFILES = $(LIBRARY) generated/*.cs generated-stamp gtksourceview-api.xml
+
+distclean-local:
+	rm -f makefile
+
