@@ -1,5 +1,9 @@
 2004-06-29  Todd Berman  <tberman@off.net>
 
+	* gtksourceview-sharp.pc.in: changeup pc file a bit.
+
+2004-06-29  Todd Berman  <tberman@off.net>
+
 	* configure.in: apiversion = 1.0.0.1, version = 0.5
 
 2004-06-29  Todd Berman  <tberman@off.net>
