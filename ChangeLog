@@ -1,5 +1,9 @@
 2004-06-29  Todd Berman  <tberman@off.net>
 
+	* configure.in: apiversion = 1.0.0.1, version = 0.5
+
+2004-06-29  Todd Berman  <tberman@off.net>
+
 	* gtksourceview/AssemblyInfo.cs.in: fix
 
 2004-06-26  Todd Berman  <tberman@off.net>
