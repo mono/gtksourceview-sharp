@@ -1,4 +1,4 @@
 SUBDIRS=		gtksourceview
 EXTRA_DIST=		csharp.lang
-csharp_langdir= 	@prefix@$/share/gtksourceview-1.0/language-specs
+csharp_langdir= 	@prefix@/share/gtksourceview-1.0/language-specs
 csharp_lang_DATA=	csharp.lang
