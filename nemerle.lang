@@ -67,7 +67,6 @@
 		<keyword>using</keyword>
 		<keyword>variant</keyword>
 		<keyword>virtual</keyword>
-		<keyword>void</keyword>
 		<keyword>when</keyword>
 		<keyword>where</keyword>
 	</keyword-list>
@@ -89,6 +88,26 @@
 		<keyword>while</keyword>
 	</keyword-list>
 
+	<pattern-item _name = "Floating Point Number" style = "Floating Point">
+		<regex>[0-9]*\.[0-9]+([eE][-+]?[0-9]+)?\b</regex>
+	</pattern-item>
+	
+	<pattern-item _name = "Decimal" style = "Decimal">
+		<regex>\b[0-9]+[Uu]?([Ll]|[Ss]|[Bb])?\b</regex>
+	</pattern-item>
+
+	<pattern-item _name = "Binary Number" style = "Base-N Integer">
+		<regex>\b0[bB][01]+[Uu]?([Ll]|[Ss]|[Bb])?\b</regex>
+	</pattern-item>
+
+	<pattern-item _name = "Octal Number" style = "Base-N Integer">
+		<regex>\b0[oO][0-7]+[Uu]?([Ll]|[Ss]|[Bb])?\b</regex>
+	</pattern-item>
+
+	<pattern-item _name = "Hex Number" style = "Base-N Integer">
+		<regex>\b0[xX][0-9a-fA-F]+[Uu]?([Ll]|[Ss]|[Bb])?\b</regex>
+	</pattern-item>
+
 	<keyword-list _name = "Primitives" style = "Data Type" case-sensitive="TRUE">
 		<keyword>bool</keyword>
 		<keyword>byte</keyword>
@@ -105,6 +124,7 @@
 		<keyword>uint</keyword>
 		<keyword>ulong</keyword>
 		<keyword>ushort</keyword>
+		<keyword>void</keyword>		
 	</keyword-list>
 	
 	<keyword-list _name = "Core Types" style = "Data Type" case-sensitive="TRUE">
