@@ -7,6 +7,10 @@
 
 -->
   <namespace name="Gtk" library="gtksourceview-1.0">
+    <enum name="SourceRegexOptions" cname="GtkSourceRegexOptions" type="flags">
+      <member cname="GTK_SOURCE_REGEX_NOT_BOL" name="Bol" value="1 &lt;&lt; 0"/>
+      <member cname="GTK_SOURCE_REGEX_NOT_EOL" name="Eol" value="1 &lt;&lt; 1"/>
+    </enum>
     <enum name="SourceSearchFlags" cname="GtkSourceSearchFlags" type="enum">
       <member cname="GTK_SOURCE_SEARCH_VISIBLE_ONLY" name="VisibleOnly"/>
       <member cname="GTK_SOURCE_SEARCH_TEXT_ONLY" name="TextOnly"/>
@@ -59,13 +63,6 @@
           <parameter type="gboolean" name="can_redo"/>
         </parameters>
       </signal>
-      <virtual_method name="CanUndo" cname="can_undo">
-        <return-type type="void"/>
-        <parameters>
-          <parameter type="GtkSourceUndoManager*" name="um"/>
-          <parameter type="gboolean" name="can_undo"/>
-        </parameters>
-      </virtual_method>
       <method name="BeginNotUndoableAction" cname="gtk_source_undo_manager_begin_not_undoable_action">
         <return-type type="void"/>
       </method>
@@ -150,21 +147,6 @@
           <parameter type="GtkTextIter*" name="where"/>
         </parameters>
       </signal>
-      <virtual_method name="CanUndo" cname="can_undo">
-        <return-type type="void"/>
-        <parameters>
-          <parameter type="GtkSourceBuffer*" name="buffer"/>
-          <parameter type="gboolean" name="can_undo"/>
-        </parameters>
-      </virtual_method>
-      <virtual_method name="HighlightUpdated" cname="highlight_updated">
-        <return-type type="void"/>
-        <parameters>
-          <parameter type="GtkSourceBuffer*" name="buffer"/>
-          <parameter type="GtkTextIter*" name="start"/>
-          <parameter type="GtkTextIter*" name="end"/>
-        </parameters>
-      </virtual_method>
       <method name="BeginNotUndoableAction" cname="gtk_source_buffer_begin_not_undoable_action">
         <return-type type="void"/>
       </method>
@@ -316,13 +298,6 @@
           <parameter type="const-gchar*" name="name"/>
         </parameters>
       </signal>
-      <virtual_method name="TagStyleChanged" cname="tag_style_changed">
-        <return-type type="void"/>
-        <parameters>
-          <parameter type="GtkSourceLanguage*" name="language"/>
-          <parameter type="const-gchar*" name="name"/>
-        </parameters>
-      </virtual_method>
       <method name="GetEscapeChar" cname="gtk_source_language_get_escape_char">
         <return-type type="gunichar"/>
       </method>
@@ -453,12 +428,6 @@
           <parameter type="GtkSourcePrintJob*" name="job"/>
         </parameters>
       </signal>
-      <virtual_method name="BeginPage" cname="begin_page">
-        <return-type type="void"/>
-        <parameters>
-          <parameter type="GtkSourcePrintJob*" name="job"/>
-        </parameters>
-      </virtual_method>
       <method name="Cancel" cname="gtk_source_print_job_cancel">
         <return-type type="void"/>
       </method>
@@ -674,12 +643,6 @@
           <parameter type="GtkSourceTagTable*" name="table"/>
         </parameters>
       </signal>
-      <virtual_method name="Changed" cname="changed">
-        <return-type type="void"/>
-        <parameters>
-          <parameter type="GtkSourceTagTable*" name="table"/>
-        </parameters>
-      </virtual_method>
       <method name="AddTags" cname="gtk_source_tag_table_add_tags">
         <return-type type="void"/>
         <parameters>
@@ -716,12 +679,6 @@
           <parameter type="GtkSourceView*" name="view"/>
         </parameters>
       </signal>
-      <virtual_method name="Undo" cname="undo">
-        <return-type type="void"/>
-        <parameters>
-          <parameter type="GtkSourceView*" name="view"/>
-        </parameters>
-      </virtual_method>
       <method name="GetAutoIndent" cname="gtk_source_view_get_auto_indent">
         <return-type type="gboolean"/>
       </method>
@@ -858,6 +815,7 @@
           <parameter type="const-gchar*" name="text"/>
           <parameter type="gint" name="pos"/>
           <parameter type="gint" name="len"/>
+          <parameter type="guint" name="options"/>
         </parameters>
       </method>
       <method name="Search" cname="gtk_source_regex_search">
@@ -867,6 +825,7 @@
           <parameter type="gint" name="pos"/>
           <parameter type="gint" name="length"/>
           <parameter type="GtkSourceBufferMatch*" name="match"/>
+          <parameter type="guint" name="options"/>
         </parameters>
       </method>
     </struct>
