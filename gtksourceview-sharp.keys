@@ -1,0 +1,6 @@
+text/x-csharp
+	category=Software Development/Source Code
+	can_be_executable=false
+	default_action_type=application
+	description=C# source code
+	short_list_application_ids_for_novice_user_level=monodevelop,anjuta,gedit

@@ -1,3 +1,8 @@
+2004-02-22  John Luke  <jluke@cfl.rr.com>
+
+	* makefile.am: add gtksourceview-sharp.keys
+	* gtksourceview-sharp.keys: add
+
 2004-02-20  John Luke  <jluke@cfl.rr.com>
 	
 	* makefile.am: install and dist gtksourceview-sharp.mime

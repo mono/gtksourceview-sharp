@@ -8,5 +8,5 @@ pkgconfig_DATA = gtksourceview-sharp.pc
 
 # should be the same as the gnome prefix
 mimeinfodir = @gtksourceview_prefix@/share/mime-info
-mimeinfo_DATA = gtksourceview-sharp.mime
+mimeinfo_DATA = gtksourceview-sharp.mime gtksourceview-sharp.keys
 
