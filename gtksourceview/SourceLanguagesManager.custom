@@ -1,8 +1,0 @@
-// Workaround for InvalidCastException bug
-
-[DllImport("gtksourceview-1.0")]
-static extern IntPtr gtk_source_languages_manager_get_language_from_mime_type(IntPtr raw, string mime_type);
-
-public Gtk.SourceLanguage GetLanguageFromMimeType(string mime_type) {
-	return new Gtk.SourceLanguage (gtk_source_languages_manager_get_language_from_mime_type(Handle, mime_type));
-}

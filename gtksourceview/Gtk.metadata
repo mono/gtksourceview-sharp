@@ -2,7 +2,6 @@
 <metadata>
   <attr path="//object[@cname='GtkSourceBuffer']/signal[@name='CanRedo']" name="name">CanRedoFired</attr>
   <attr path="//object[@cname='GtkSourceBuffer']/signal[@name='CanUndo']" name="name">CanUndoFired</attr>
-  <attr path="//object[@cname='GtkSourceLanguagesManager']/method[@name='GetLanguageFromMimeType']" name="hidden">1</attr>
   <attr path="//object[@cname='GtkSourceMarker']" name="parent">GtkTextMark</attr>
   <attr path="//object[@cname='GtkSourceUndoManager']/signal[@name='CanRedo']" name="name">CanRedoFired</attr>
   <attr path="//object[@cname='GtkSourceUndoManager']/signal[@name='CanUndo']" name="name">CanUndoFired</attr>
