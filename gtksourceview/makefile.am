@@ -10,12 +10,8 @@ INCLUDE_APIS=	@gtksharp_prefix@/share/gapi/atk-api.xml		\
 		@gtksharp_prefix@/share/gapi/gtk-symbols.xml	\
 		@gtksharp_prefix@/share/gapi/pango-api.xml
 
-ASSEMBLIES=	-r atk-sharp.dll	\
-		-r gdk-sharp.dll	\
-		-r glib-sharp.dll	\
-		-r gtk-sharp.dll	\
-		-r gnome-sharp.dll	\
-		-r pango-sharp.dll
+ASSEMBLIES=	/pkg:gtk-sharp		\
+		/pkg:gnome-sharp
 
 EXTRA_DIST = $(sources) $(customs) Gtk.metadata gtksourceview-api.raw AssemblyInfo.cs.in
 
