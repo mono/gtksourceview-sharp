@@ -43,8 +43,8 @@ gtk-sharp.snk: $(top_srcdir)/gtk-sharp.snk
 	cp $(top_srcdir)/gtk-sharp.snk .
 
 $(LIBRARY): generated-stamp $(build_sources) gtk-sharp.snk
-	$(CSC) --unsafe --target library $(ASSEMBLIES) \
-	generated/*.cs $(build_sources) -o $(LIBRARY)
+	$(CSC) /unsafe /target:library $(ASSEMBLIES) \
+	generated/*.cs $(build_sources) -out:$(LIBRARY)
 
 CLEANFILES = $(LIBRARY) generated/*.cs generated-stamp gtksourceview-api.xml gtk-sharp.snk
 

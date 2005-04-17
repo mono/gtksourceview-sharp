@@ -2,8 +2,9 @@
 
 	* autogen.sh: remove libtoolize
 	* configure.in: depend on gtk# 1.9.3 or newer
-	remove AC_PROG_LIBTOOL an *_CFLAGS AC_SUBSTs
+	remove AC_PROG_LIBTOOL and gtksourceview_CFLAGS AC_SUBST
 	* Makefile.am: add .pc file to DISTCLEANFILES
+	* gtksourceview/Makefile.am: use compatible compiler commands
 
 2005-03-12  Todd Berman  <tberman@off.net>
 

@@ -64,6 +64,7 @@ AC_SUBST(LIB_PREFIX)
 AC_SUBST(LIB_SUFFIX)
 
 PKG_CHECK_MODULES(GTK_SHARP, gnome-sharp-2.0 >= 1.9.3)
+AC_SUBST(GTK_SHARP_CFLAGS)
 AC_SUBST(GTK_SHARP_LIBS)
 gtksharp_prefix=`pkg-config --variable=prefix gtk-sharp-2.0`
 AC_SUBST(gtksharp_prefix)
