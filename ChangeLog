@@ -1,3 +1,10 @@
+2005-04-17  John Luke <john.luke@gmail.com>
+
+	* autogen.sh: remove libtoolize
+	* configure.in: depend on gtk# 1.9.3 or newer
+	remove AC_PROG_LIBTOOL an *_CFLAGS AC_SUBSTs
+	* Makefile.am: add .pc file to DISTCLEANFILES
+
 2005-03-12  Todd Berman  <tberman@off.net>
 
 	* configure.in: Push 0.7
