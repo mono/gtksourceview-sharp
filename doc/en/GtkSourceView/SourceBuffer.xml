@@ -395,7 +395,7 @@ By default highlighting is enabled, but you can disable it with <see cref="P:Gtk
         <Parameter Name="language" Type="GtkSourceView.SourceLanguage" />
       </Parameters>
       <Docs>
-        <summary>To be added</summary>
+        <summary>Creates a new SourceBuffer with a specified source language.</summary>
         <param name="language">a <see cref="T:GtkSourceView.SourceLanguage" /></param>
         <returns>a <see cref="T:GtkSourceView.SourceBuffer" /></returns>
         <remarks>To be added</remarks>
@@ -448,7 +448,7 @@ By default highlighting is enabled, but you can disable it with <see cref="P:Gtk
       </ReturnValue>
       <Parameters />
       <Docs>
-        <summary>To be added</summary>
+        <summary>Enable and disable highlight of the source language.</summary>
         <returns>a <see cref="T:System.Boolean" /></returns>
         <remarks>To be added</remarks>
       </Docs>
@@ -461,7 +461,7 @@ By default highlighting is enabled, but you can disable it with <see cref="P:Gtk
       </ReturnValue>
       <Parameters />
       <Docs>
-        <summary>To be added</summary>
+        <summary>Sets and gets the source language.</summary>
         <returns>a <see cref="T:GtkSourceView.SourceLanguage" /></returns>
         <remarks>To be added</remarks>
       </Docs>
