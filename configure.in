@@ -1,6 +1,6 @@
 AC_INIT(README)
 AC_CANONICAL_SYSTEM
-AM_INIT_AUTOMAKE(gtksourceview-sharp, 0.7)
+AM_INIT_AUTOMAKE(gtksourceview-sharp-2.0, 0.8)
 AM_MAINTAINER_MODE
 
 dnl Defines CC to avoid warnings
@@ -54,7 +54,7 @@ if test "x$GACUTIL" = "xno" ; then
 	AC_MSG_ERROR([No gacutil tool found])
 fi
 
-GACUTIL_FLAGS='/package gtksourceview-sharp /gacdir $(libdir)'
+GACUTIL_FLAGS='/package gtksourceview-sharp-2.0 /root $(DESTDIR)$(prefix)/lib'
                                      
 AC_SUBST(RUNTIME)
 AC_SUBST(CSC)

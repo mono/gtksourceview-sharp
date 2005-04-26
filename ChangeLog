@@ -1,3 +1,9 @@
+2005-04-26  Ben Maurer  <bmaurer@ximian.com>
+
+	* configure.in, gtksourceview-sharp-2.0.pc.in: Changes for ||
+	install and version bumpage. Also, make GACUTIL_FLAGS
+	packager-friendly.
+
 2005-04-17  John Luke <john.luke@gmail.com>
 
 	* autogen.sh: remove libtoolize
