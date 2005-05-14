@@ -1,3 +1,7 @@
+2005-05-14  Ben Maurer  <bmaurer@ximian.com>
+
+	* configure.in: Bump and tag.
+
 2005-05-13  Ben Maurer  <bmaurer@ximian.com>
 
 	* Makefile.am: Use the noarch pkgconfig directory.

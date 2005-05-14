@@ -1,6 +1,6 @@
 AC_INIT(README)
 AC_CANONICAL_SYSTEM
-AM_INIT_AUTOMAKE(gtksourceview-sharp-2.0, 0.8)
+AM_INIT_AUTOMAKE(gtksourceview-sharp-2.0, 0.10)
 AM_MAINTAINER_MODE
 
 dnl Defines CC to avoid warnings
