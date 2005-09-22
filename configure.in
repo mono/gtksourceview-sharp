@@ -98,19 +98,18 @@ if test "x$GAPI_CODEGEN" = "xno"; then
 fi
 AC_SUBST(GAPI_CODEGEN)
 
-MONODOC_REQUIRED_VERSION=1.0
-PKG_CHECK_MODULES(MONODOC_DEPENDENCY, monodoc >= $MONODOC_REQUIRED_VERSION, enable_monodoc=yes, enable_monodoc=no)
-                                                                                
-if test "x$enable_monodoc" = "xyes"; then 
-    AC_PATH_PROG(MONODOC, monodoc, no)
-    if test "x$MONODOC" = "xno"; then
-       enable_monodoc=no
-    fi
+AC_PATH_PROG(MDASSEMBLER, mdassembler, no)
+AC_PATH_PROG(MONODOCER, monodocer, no)
+if test "x$MONODOCER" = "xno" -o "x$MDASSEMBLER" = "xno"; then
+  enable_monodoc=no
+  doc_sources_dir=
 else
-    MONODOC=
+  enable_monodoc=yes
+  doc_sources_dir="`pkg-config --variable=sourcesdir monodoc`"
 fi
-AC_SUBST(MONODOC)
-
+AC_SUBST(MDASSEMBLER)
+AC_SUBST(MONODOCER)
+                                                                                
 API_VERSION="1.0.0.2"
 AC_SUBST(API_VERSION)
 

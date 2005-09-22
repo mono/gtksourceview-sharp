@@ -1,3 +1,9 @@
+2005-09-22  John Luke <john.luke@gmail.com>
+
+	* configure.in:
+	* doc/Makefile.am: use monodocer and mdassembler now
+	fixes bug #76183
+
 2005-07-23  John Luke <john.luke@gmail.com>
 
 	* sample/PrintSample.cs: printing sample
