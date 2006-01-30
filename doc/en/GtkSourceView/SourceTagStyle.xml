@@ -85,7 +85,8 @@ Its an aggregation of properties for the <see cref="T:Gtk.TextBuffer" />, built 
       </Parameters>
       <Docs>
         <summary>To be added</summary>
-        <remarks>To be added</remarks>
+        <remarks>Sets the background color of the SourceTagStyle, which is of the
+type <see cref="T:Gdk.Color" />.</remarks>
       </Docs>
     </Member>
     <Member MemberName="Italic">
@@ -111,7 +112,9 @@ Its an aggregation of properties for the <see cref="T:Gtk.TextBuffer" />, built 
       </Parameters>
       <Docs>
         <summary>To be added</summary>
-        <remarks>To be added</remarks>
+        <remarks>Setting this value to True or False , values of the type <see cref="T:bool" />.
+True and False respectively enable or disable the Bold-ness of text described by
+the SourceTagStyle applied on a TextBuffer.</remarks>
       </Docs>
     </Member>
     <Member MemberName="Underline">
