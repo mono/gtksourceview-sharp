@@ -11,7 +11,11 @@
   <ThreadSafetyStatement>Gtk# is thread aware, but not thread safe; See the <link location="node:gtk-sharp/programming/threads">Gtk# Thread Programming</link> for details.</ThreadSafetyStatement>
   <Docs>
     <summary>To be added</summary>
-    <remarks>To be added</remarks>
+    <remarks>SourceTagStyle is used to store tags that describe the attributes of a <see cref="T:GtkSourceView.SourceViewBuffer" />.
+Generally we specify features that relate to the dispaly properties of the textbuffer, like which parts of the text have
+bold, italic, underlined properties, and what color of foreground and background for the buffer.
+
+Its an aggregation of properties for the <see cref="T:Gtk.TextBuffer" />, built over the <see cref="Gtk.TextTag" />.</remarks>
   </Docs>
   <Base>
     <BaseTypeName>System.ValueType</BaseTypeName>
