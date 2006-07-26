@@ -188,9 +188,9 @@
       </ReturnValue>
       <Parameters />
       <Docs>
-        <summary>To be added</summary>
+        <summary>Remembering indentation on a new line.</summary>
         <returns>a <see cref="T:System.Boolean" /></returns>
-        <remarks>To be added</remarks>
+        <remarks>Remembering indentation on a new line.</remarks>
       </Docs>
     </Member>
     <Member MemberName="ShowMargin">
@@ -201,9 +201,9 @@
       </ReturnValue>
       <Parameters />
       <Docs>
-        <summary>To be added</summary>
+        <summary>Show the print margin.</summary>
         <returns>a <see cref="T:System.Boolean" /></returns>
-        <remarks>To be added</remarks>
+        <remarks>Show the print margin, which can be altered by changing the value of <see cref="E:GtkSourceView.SourceView.Margin" />.</remarks>
       </Docs>
     </Member>
     <Member MemberName="InsertSpacesInsteadOfTabs">
@@ -214,9 +214,20 @@
       </ReturnValue>
       <Parameters />
       <Docs>
-        <summary>To be added</summary>
+        <summary>Insert spaces instead of tab characters.</summary>
         <returns>a <see cref="T:System.Boolean" /></returns>
-        <remarks>To be added</remarks>
+        <remarks>
+          <para>
+Insert spaces instead of tab characters.
+</para>
+          <example>
+            <code lang="C#">GtkSourceView.SourceView Source = new GtkSourceView.SourceView();
+Source.ShowLineNumbers = true;
+
+// Tabs become 8 spaces:
+Source.TabsWidth = 8;</code>
+          </example>
+        </remarks>
       </Docs>
     </Member>
     <Member MemberName="Margin">
@@ -227,9 +238,9 @@
       </ReturnValue>
       <Parameters />
       <Docs>
-        <summary>To be added</summary>
+        <summary>Size of the print margin in characters.</summary>
         <returns>a <see cref="T:System.UInt32" /></returns>
-        <remarks>To be added</remarks>
+        <remarks>Size of the print margin in characters. Must be enabled with <see cref="E:GtkSourceView.SourceView.ShowMargin" />.</remarks>
       </Docs>
     </Member>
     <Member MemberName="TabsWidth">
@@ -240,9 +251,19 @@
       </ReturnValue>
       <Parameters />
       <Docs>
-        <summary>To be added</summary>
+        <summary>Width that tab characters are drawn.</summary>
         <returns>a <see cref="T:System.UInt32" /></returns>
-        <remarks>To be added</remarks>
+        <remarks>
+          <para>
+How wide tab characters are drawn, or how many spaces to use when <see cref="E:GtkSourceView.SourceView.InsertSpacesInsteadOfTabs" /> is used.
+</para>
+          <example>
+            <code lang="C#">GtkSourceView.SourceView Source = new GtkSourceView.SourceView();
+
+// Tabs become 8 characters wide:
+Source.TabsWidth = 8;</code>
+          </example>
+        </remarks>
       </Docs>
     </Member>
     <Member MemberName="SmartHomeEnd">
@@ -253,9 +274,9 @@
       </ReturnValue>
       <Parameters />
       <Docs>
-        <summary>To be added</summary>
+        <summary>Changes the behaviour of the Home  key.</summary>
         <returns>a <see cref="T:System.Boolean" /></returns>
-        <remarks>To be added</remarks>
+        <remarks>The Home key alternates between the start of the line and the start of the text.</remarks>
       </Docs>
     </Member>
     <Member MemberName="ShowLineNumbers">
@@ -266,9 +287,9 @@
       </ReturnValue>
       <Parameters />
       <Docs>
-        <summary>To be added</summary>
+        <summary>Show line numbering.</summary>
         <returns>a <see cref="T:System.Boolean" /></returns>
-        <remarks>To be added</remarks>
+        <remarks>Show line numbering.</remarks>
       </Docs>
     </Member>
     <Member MemberName="ShowLineMarkers">
