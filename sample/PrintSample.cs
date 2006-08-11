@@ -63,7 +63,7 @@ class PrintSample
 		spj.PrintFooter = true;
 
 		// print the whole buffer and return the result
-		PrintJob pj = spj.Print ();
+		Gnome.PrintJob pj = spj.Print ();
 		spj.Dispose ();
 
 		PrintDialog dialog = new PrintDialog (pj, "Print Test", 0);

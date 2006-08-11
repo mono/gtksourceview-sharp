@@ -1,3 +1,8 @@
+2006-08-11  Ben Gamari <ben@mw0.ath.cx>
+
+	* sample/PrintSample.cs : clarify PrintJob namespace.
+	[Fixes #79058]
+
 2005-09-22  John Luke <john.luke@gmail.com>
 
 	* configure.in:
