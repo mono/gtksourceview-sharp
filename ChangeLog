@@ -1,3 +1,9 @@
+2007-04-06  Wade Berrier  <wberrier@novell.com>
+
+	* configure.in: stole output summary from gecko-sharp
+	* doc/Makefile.am: fix update command and get doc dir from
+	pkg-config
+
 2006-08-11  Ben Gamari <ben@mw0.ath.cx>
 
 	* sample/PrintSample.cs : clarify PrintJob namespace.

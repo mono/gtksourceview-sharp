@@ -124,3 +124,12 @@ gtksourceview-sharp-2.0.pc
 doc/Makefile
 sample/Makefile
 ])
+
+echo "---"
+echo "Configuration summary"
+echo ""
+echo "   * Installation prefix: $prefix"
+echo "   * compiler: $CSC"
+echo "   * Documentation: $enable_monodoc"
+echo ""
+
