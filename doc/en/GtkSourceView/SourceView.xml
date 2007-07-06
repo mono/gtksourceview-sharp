@@ -10,8 +10,59 @@
   </AssemblyInfo>
   <ThreadSafetyStatement>Gtk# is thread aware, but not thread safe; See the <link location="node:gtk-sharp/programming/threads">Gtk# Thread Programming</link> for details.</ThreadSafetyStatement>
   <Docs>
-    <summary>To be added</summary>
-    <remarks>To be added</remarks>
+    <summary>This class extends <see cref="T:Gtk.TextView" />, adding support for syntax highlighting.</summary>
+    <remarks>
+      <para>In order to be useful, the internal <see cref="T:GtkSourceView.SourceBuffer" /> must have a <see cref="T:GtkSourceView.SourceLanguage" /> assigned to it. The default languages are stored in a <see cref="T:GtkSourceView.SourceLanguagesManager" />.</para>
+      <example>
+        <para>The following example creates an editor that highlights C# code.</para>
+        <code lang="C#">using Gtk;
+using GtkSourceView;
+
+public class SourceViewExample
+{
+	public static void Main ()
+	{
+		// Initialize GTK.
+		Application.Init ();
+		
+		// Create a containing window.
+		Window window = new Window ("SourceView Example");
+		window.DeleteEvent += OnDelete;
+		window.SetDefaultSize (400, 300);
+		
+		// Create the language manager.
+		SourceLanguagesManager manager = new SourceLanguagesManager ();
+		
+		// Get the C# source language definition.
+		SourceLanguage language = manager.GetLanguageFromMimeType ("text/x-csharp");
+		
+		// Create a buffer for the language and enable highlighting.
+		SourceBuffer buffer = new SourceBuffer (language);
+		buffer.Highlight = true;
+		
+		// Create a view for the buffer.
+		SourceView view = new SourceView (buffer);
+		
+		// Create a scrolled window and add the view.
+		ScrolledWindow scrolled_window = new ScrolledWindow ();
+		scrolled_window.Add (view);
+		
+		// Add the scrolled window to the window and show it.
+		window.Add (scrolled_window);
+		window.ShowAll ();
+		
+		// Run the application.
+		Application.Run ();
+	}
+	
+	// Quit when the window is closed.
+	static void OnDelete (object o, DeleteEventArgs e)
+	{
+		Application.Quit ();
+	}
+}</code>
+      </example>
+    </remarks>
   </Docs>
   <Base>
     <BaseTypeName>Gtk.TextView</BaseTypeName>
