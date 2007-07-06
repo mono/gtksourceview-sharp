@@ -25,3 +25,6 @@ dist-hook:
 	mkdir -p $(distdir)/en/GtkSourceView
 	cp $(srcdir)/en/GtkSourceView/*.xml $(distdir)/en/GtkSourceView/
 
+
+push:
+	scp gtksourceview-sharp-docs.* root@www.go-mono.com:/usr/lib/monodoc/sources/
