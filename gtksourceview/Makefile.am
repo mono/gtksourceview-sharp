@@ -35,6 +35,7 @@ SourceBuffer.custom \
 SourceLanguage.custom \
 SourceLanguagesManager.custom \
 SourceStyleScheme.custom \
+SourceStyleSchemeAdapter.custom \
 SourceTagTable.custom
 
 build_customs = $(addprefix $(srcdir)/, $(customs))

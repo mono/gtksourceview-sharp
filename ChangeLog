@@ -1,3 +1,11 @@
+2007-11-08  Mike Kestner  <mkestner@novell.com>
+
+	* gtksourceview/SourceStyleSchemeAdapter.custom: new custom
+	property needed because of the custom interface prop.  This
+	should be reworked in 2.0 to use element_type attrs in the 
+	api to automatically do all this without customizations.
+	[Fixes #336541]
+
 2007-04-20  Wade Berrier  <wberrier@novell.com>
 
 	* configure.in: version bump -> 0.11 (been too long)

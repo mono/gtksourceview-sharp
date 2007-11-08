@@ -1,0 +1,9 @@
+
+		[DllImport ("libgtksourceview-1.0")]
+		static extern IntPtr gtk_source_style_scheme_get_style_names (IntPtr handle);
+
+		public string[] StyleNames {
+                        get {
+				return (string[]) GLib.Marshaller.ListToArray (new GLib.SList (gtk_source_style_scheme_get_style_names (Handle), typeof(string), false, false), typeof (string));
+			}
+                }
