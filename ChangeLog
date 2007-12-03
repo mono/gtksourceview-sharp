@@ -4,6 +4,7 @@
 	* gtksourceview/Makefile.am: dependencies for fixup and new custom.
 	* gtksourceview/SourcePrintJob.custom: obsolete compat member
 	and SetupFromView manual impl for new generator versions.
+	* sample/PrintSample.cs: update to corrected SetupFromView.
 
 2007-11-08  Mike Kestner  <mkestner@novell.com>
 

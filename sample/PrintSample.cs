@@ -47,8 +47,7 @@ class PrintSample
 		SourcePrintJob spj = new SourcePrintJob (null);
 
 		// quickly setup the buffer, font and wrapping
-		// FIXME: should be SetupFromView (view);
-		spj.upFromView = tv;
+		spj.SetupFromView (tv);
 
 		// print line numbers every 5 lines
 		spj.PrintNumbers = 5;
