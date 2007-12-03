@@ -13,6 +13,7 @@
   <attr path="/api/namespace/object[@cname='GtkSourceLanguage']/method[@name='SetMimeTypes']" name="hidden">1</attr>
   <attr path="/api/namespace/object[@cname='GtkSourceLanguage']/method[@name='GetTags']" name="hidden">1</attr>
   <attr path="/api/namespace/object[@cname='GtkSourceLanguagesManager']/method[@name='GetAvailableLanguages']" name="hidden">1</attr>
+  <attr path="/api/namespace/object[@cname='GtkSourcePrintJob']/method[@name='SetupFromView']" name="hidden">1</attr>
   <attr path="/api/namespace/interface[@cname='GtkSourceStyleScheme']/method[@name='GetStyleNames']" name="hidden">1</attr>
   <attr path="/api/namespace/object[@cname='GtkSourceTagTable']/method[@name='AddTags']" name="hidden">1</attr>
   <attr path="/api/namespace/class[@name='Global']/method[@name='KeywordListTagNew']" name="hidden">1</attr>

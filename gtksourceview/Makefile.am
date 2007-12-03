@@ -15,7 +15,7 @@ api_DATA = gtksourceview-api.xml
 
 all: $(LIBRARY)
 
-gtksourceview-api.xml:
+gtksourceview-api.xml: gtksourceview-api.raw Gtk.metadata
 	cp $(srcdir)/gtksourceview-api.raw gtksourceview-api.xml
 	chmod u+w gtksourceview-api.xml
 	$(GAPI_FIXUP) --api=gtksourceview-api.xml --metadata=$(srcdir)/Gtk.metadata
@@ -34,6 +34,7 @@ Global.custom \
 SourceBuffer.custom \
 SourceLanguage.custom \
 SourceLanguagesManager.custom \
+SourcePrintJob.custom \
 SourceStyleScheme.custom \
 SourceStyleSchemeAdapter.custom \
 SourceTagTable.custom
