@@ -1,3 +1,8 @@
+2009-02-09  Jonathan Pryor  <jpryor@novell.com>
+
+	* doc/gtksourceview-sharp-docs.source: Add a /monodoc/node element so 
+	  that documentation is inserted under the "Gnome Libraries" node.
+
 2008-02-26  Wade Berrier  <wberrier@novell.com>
 
 	* configure.in: version bump -> 0.12
