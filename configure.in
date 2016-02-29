@@ -69,6 +69,16 @@ AC_SUBST(GTK_SHARP_LIBS)
 gtksharp_prefix=`pkg-config --variable=prefix gtk-sharp-2.0`
 AC_SUBST(gtksharp_prefix)
 
+PKG_CHECK_MODULES(GNOMEPRINT_SHARP, gnome-print-sharp-2.18, use_gnomeprint=yes, use_gnomeprint=no)
+if test "x$use_gnomeprint" = "xyes" ; then
+GNOMEPRINT_SHARP_REQUIRES=gnome-print-sharp-2.18
+else
+GNOMEPRINT_SHARP_REQUIRES=
+fi
+AC_SUBST(GNOMEPRINT_SHARP_CFLAGS)
+AC_SUBST(GNOMEPRINT_SHARP_LIBS)
+AC_SUBST(GNOMEPRINT_SHARP_REQUIRES)
+
 PKG_CHECK_MODULES(GTKSOURCEVIEW, gtksourceview-1.0 >= 1.0.0)
 AC_SUBST(GTKSOURCEVIEW_LIBS)
 gtksourceview_prefix=`pkg-config --variable=prefix gtksourceview-1.0`
