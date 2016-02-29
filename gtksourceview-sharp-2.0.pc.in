@@ -6,5 +6,5 @@ libdir=@libdir@
 Name: GtkSourceView#
 Description: GtkSourceView# - gtksourceview .NET Binding
 Version: @VERSION@
-Requires: gnome-sharp-2.0
+Requires: gnome-sharp-2.0 @GNOMEPRINT_SHARP_REQUIRES@
 Libs: -r:${prefix}/lib/mono/gtksourceview-sharp-2.0/gtksourceview-sharp.dll

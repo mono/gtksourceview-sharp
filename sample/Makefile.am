@@ -10,5 +10,5 @@ $(TEST): $(srcdir)/SourceViewTest.cs
 	$(CSC) -out:$@ $(srcdir)/SourceViewTest.cs -r:../gtksourceview/gtksourceview-sharp.dll -pkg:gtk-sharp-2.0
 
 $(PRINT): $(srcdir)/PrintSample.cs
-	$(CSC) -out:$@ $(srcdir)/PrintSample.cs -r:../gtksourceview/gtksourceview-sharp.dll -pkg:gtk-sharp-2.0 -pkg:gnome-sharp-2.0
+	$(CSC) -out:$@ $(srcdir)/PrintSample.cs -r:../gtksourceview/gtksourceview-sharp.dll -pkg:gtk-sharp-2.0 -pkg:gnome-sharp-2.0 $(GNOMEPRINT_SHARP_LIBS)
 
